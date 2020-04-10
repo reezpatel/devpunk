@@ -1,0 +1,35 @@
+{
+  "domain": "threatpost.com",
+  "icons": [
+    {
+      "sizes": "32x32",
+      "src": "https://threatpost.com/wp-content/themes/threatpost-2018/assets/images/favicon/favicon-32x32.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "16x16",
+      "src": "https://threatpost.com/wp-content/themes/threatpost-2018/assets/images/favicon/favicon-16x16.png",
+      "type": "image/png"
+    },
+    {
+      "src": "https://threatpost.com/wp-content/themes/threatpost-2018/assets/images/favicon/favicon.ico"
+    },
+    {
+      "sizes": "180x180",
+      "src": "https://threatpost.com/wp-content/themes/threatpost-2018/assets/images/favicon/apple-touch-icon.png"
+    },
+    {
+      "src": "https://threatpost.com/wp-content/themes/threatpost-2018/assets/images/favicon/safari-pinned-tab.svg"
+    },
+    {
+      "src": "https://threatpost.com/assets/images/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://threatpost.com/assets/images/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,954 @@
+
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msvalidate.01" content="36CD710C24E3493CA54F6E2FA73BB0DE" />
+    <meta name="google-site-verification" content="yd1dhSjzS5byK6DbpHIKXuhgJpUwPctgSR070xrzPAU" />
+    <meta name="yandex-verification" content="52c99524e8515c63" />
+    <meta name='dmca-site-verification' content='Qk9DMXdTbDBsSDBKMG5OT0g5TExtZzdJSnRSY3BjMU1qTkw4MlhRYVBYWT01' />
+    <title>positronX.io - Learn Full Stack Development</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://www.positronx.io/wp-content/themes/positronx/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://www.positronx.io/wp-content/themes/positronx/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://www.positronx.io/wp-content/themes/positronx/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://www.positronx.io/wp-content/themes/positronx/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://www.positronx.io/wp-content/themes/positronx/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://www.positronx.io/wp-content/themes/positronx/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://www.positronx.io/wp-content/themes/positronx/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://www.positronx.io/wp-content/themes/positronx/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.positronx.io/wp-content/themes/positronx/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://www.positronx.io/wp-content/themes/positronx/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.positronx.io/wp-content/themes/positronx/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://www.positronx.io/wp-content/themes/positronx/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.positronx.io/wp-content/themes/positronx/favicon-16x16.png">
+    <link rel="manifest" href="https://www.positronx.io/wp-content/themes/positronx/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://www.positronx.io/wp-content/themes/positronx/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="pingback" href="https://www.positronx.io/xmlrpc.php" />
+    <link rel="stylesheet" href="https://www.positronx.io/wp-content/themes/positronx/style.css?v=582" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125416634-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-125416634-1');
+    </script>
+ 
+    <script type="text/javascript">
+        window.__afterTrafficQualityExecute = function() {
+            
+            (function(v, d, o, ai) {
+            ai = d.createElement('script');
+            ai.defer = true;
+            ai.async = true;
+            ai.src = v.location.protocol + o;
+            d.head.appendChild(ai);
+            })(window, document, '//a.vdo.ai/core/positronx/vdo.ai.js?vdo=34');    
+
+            (function() {
+            var bsa_optimize = document.createElement('script');
+            bsa_optimize.type = 'text/javascript';
+            bsa_optimize.async = true;
+            bsa_optimize.src = 'https://cdn-s2s.buysellads.net/pub/positronx.js?' + (new Date() - new Date() % 3600000);
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bsa_optimize);
+            })();
+
+
+            window.googletag = window.googletag || {cmd: []};
+            googletag.cmd.push(function() {
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+                googletag.display('bsa-zone_1574377384932-9_123456');
+                googletag.display('bsa-zone_1574377454220-5_123456');
+                googletag.display('bsa-zone_1574377501661-3_123456');
+                googletag.display('bsa-zone_1574377548719-4_123456');
+                googletag.display('bsa-zone_1574377588455-0_123456');
+            });
+        };
+    </script>
+
+    
+<!-- This site is optimized with the Yoast SEO plugin v13.4.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Learn full stack development, we publish free video tutorials, guides, and blogs every week on the latest programming languages and frameworks."/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://www.positronx.io/" />
+<link rel="next" href="https://www.positronx.io/page/2/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="positronX.io - Learn Full Stack Development" />
+<meta property="og:description" content="Learn full stack development, we publish free video tutorials, guides, and blogs every week on the latest programming languages and frameworks." />
+<meta property="og:url" content="https://www.positronx.io/" />
+<meta property="og:site_name" content="positronX.io" />
+<meta property="fb:app_id" content="2373480019546484" />
+<meta property="og:image" content="https://www.positronx.io/wp-content/uploads/2018/10/dummy-post.jpg" />
+<meta property="og:image:secure_url" content="https://www.positronx.io/wp-content/uploads/2018/10/dummy-post.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="628" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Learn full stack development, we publish free video tutorials, guides, and blogs every week on the latest programming languages and frameworks." />
+<meta name="twitter:title" content="positronX.io - Learn Full Stack Development" />
+<meta name="twitter:site" content="@RawatDigamberr" />
+<meta name="twitter:image" content="https://www.positronx.io/wp-content/uploads/2018/10/dummy-post.jpg" />
+<meta name="msvalidate.01" content="36CD710C24E3493CA54F6E2FA73BB0DE" />
+<meta name="google-site-verification" content="yd1dhSjzS5byK6DbpHIKXuhgJpUwPctgSR070xrzPAU" />
+<meta name="yandex-verification" content="52c99524e8515c63" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://www.positronx.io/#/schema/person/64c624e3d3e1614c011ecc788edf614f","name":"Digamber","image":{"@type":"ImageObject","@id":"https://www.positronx.io/#personlogo","inLanguage":"en-US","url":"https://secure.gravatar.com/avatar/a1cfb3fbc3daff8cbe23e214dff6ae8e?s=96&d=mm&r=g","caption":"Digamber"},"logo":{"@id":"https://www.positronx.io/#personlogo"},"description":"Digamber Rawat is from Uttarakhand, located in northwestern part of India. He is a Full-stack developer by profession and a primary author of this blog.","sameAs":["https://www.facebook.com/positronXX","https://www.linkedin.com/in/rawatdigamber","https://twitter.com/https://twitter.com/RawatDigamberr"]},{"@type":"WebSite","@id":"https://www.positronx.io/#website","url":"https://www.positronx.io/","name":"positronX.io","inLanguage":"en-US","description":"Learn Full Stack Development","publisher":{"@id":"https://www.positronx.io/#/schema/person/64c624e3d3e1614c011ecc788edf614f"},"potentialAction":[{"@type":"SearchAction","target":"https://www.positronx.io/?s={search_term_string}","query-input":"required name=search_term_string"}]},{"@type":"CollectionPage","@id":"https://www.positronx.io/#webpage","url":"https://www.positronx.io/","name":"positronX.io - Learn Full Stack Development","isPartOf":{"@id":"https://www.positronx.io/#website"},"inLanguage":"en-US","about":{"@id":"https://www.positronx.io/#/schema/person/64c624e3d3e1614c011ecc788edf614f"},"description":"Learn full stack development, we publish free video tutorials, guides, and blogs every week on the latest programming languages and frameworks."}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//www.positronx.io' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.positronx.io/wp-includes/css/dist/block-library/style.min.css?ver=' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://www.positronx.io/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-date-remover-css'  href='https://www.positronx.io/wp-content/plugins/wp-date-remover/public/css/wp-date-remover-public.css?ver=' type='text/css' media='all' />
+<link rel='stylesheet' id='__EPYT__style-css'  href='https://www.positronx.io/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css?ver=' type='text/css' media='all' />
+<style id='__EPYT__style-inline-css' type='text/css'>
+
+                .epyt-gallery-thumb {
+                        width: 33.333%;
+                }
+                
+</style>
+<script type='text/javascript' src='https://www.positronx.io/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.positronx.io/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://www.positronx.io/wp-content/plugins/wp-date-remover/public/js/wp-date-remover-public.js?ver=1.0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _EPYT_ = {"ajaxurl":"https:\/\/www.positronx.io\/wp-admin\/admin-ajax.php","security":"e1d32359dd","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/www.positronx.io\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","eppath":"https:\/\/www.positronx.io\/wp-content\/plugins\/youtube-embed-plus\/","epresponsiveselector":"[\"iframe.__youtube_prefs__\"]","epdovol":"1","version":"13.2.3","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","pause_others":"","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.positronx.io/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=13.2.3'></script>
+<link rel='https://api.w.org/' href='https://www.positronx.io/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.positronx.io/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.positronx.io/wp-includes/wlwmanifest.xml" /> 
+<!-- There is no amphtml version available for this URL. --></head>
+
+<body class="home blog">
+    <header class="header">
+        <div class="nav-container">
+            <div class="inner-top-header">
+                <div class="social-media-nav">
+                    <ul>
+                        <li class="facebook">
+                            <a href="https://www.facebook.com/positronXX" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 8 18" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="facebook-letter-logo" fill="#ffffff" fill-rule="nonzero">
+                                            <path
+                                                d="M1.74578218,3.2990099 C1.74578218,3.72827723 1.74578218,5.64427723 1.74578218,5.64427723 L0.0275643564,5.64427723 L0.0275643564,8.51207921 L1.74578218,8.51207921 L1.74578218,17.0341782 L5.27536634,17.0341782 L5.27536634,8.51231683 L7.64388119,8.51231683 C7.64388119,8.51231683 7.86570297,7.13722772 7.97322772,5.63370297 C7.6649505,5.63370297 5.28871287,5.63370297 5.28871287,5.63370297 C5.28871287,5.63370297 5.28871287,3.96530693 5.28871287,3.67287129 C5.28871287,3.37980198 5.67354455,2.98558416 6.05390099,2.98558416 C6.43354455,2.98558416 7.23481188,2.98558416 7.9769505,2.98558416 C7.9769505,2.59512871 7.9769505,1.2460198 7.9769505,3.96039604e-05 C6.98621782,3.96039604e-05 5.85908911,3.96039604e-05 5.36225743,3.96039604e-05 C1.65853465,-0.000158415842 1.74578218,2.87049505 1.74578218,3.2990099 Z"
+                                                id="Facebook"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="twitter">
+                            <a href="https://twitter.com/ImDigamberSingh" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 22 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="twitter-logo" fill="#ffffff" fill-rule="nonzero">
+                                            <path
+                                                d="M19.4673968,6.77043619 C20.7004687,6.66870534 21.536877,6.10813921 21.858761,5.34753132 C21.4139629,5.6207703 20.0332204,5.91866357 19.2706729,5.63496056 C19.2333086,5.45579582 19.1915545,5.28561485 19.1505661,5.13197216 C18.5695313,2.99843155 16.5801392,1.27957309 14.495652,1.48722042 C14.6643016,1.41912761 14.8353503,1.35573086 15.0058886,1.29881671 C15.2353318,1.21663573 16.5815174,0.997605568 16.3695313,0.522436195 C16.190877,0.104487239 14.5461346,0.838296984 14.2364501,0.934208817 C14.6452622,0.780464037 15.3213411,0.51600464 15.3937726,0.0462459397 C14.7674617,0.132153132 14.1526357,0.428259861 13.6775684,0.858816705 C13.8490766,0.674190255 13.9791879,0.449187935 14.0068028,0.207034803 C12.3363341,1.27421346 11.3605244,3.42572158 10.5708213,5.51276102 C9.95073782,4.91181903 9.40114617,4.43858933 8.90811137,4.17581439 C7.52496984,3.43409281 5.87119258,2.66021346 3.27514153,1.69650116 C3.19546172,2.55541995 3.69993039,3.69748028 5.15356381,4.4569652 C4.83862181,4.41480278 4.26269142,4.50887703 3.80206961,4.61918329 C3.98965661,5.60316009 4.6022877,6.41384223 6.26081206,6.80586079 C5.50285847,6.85588399 5.11114617,7.02836195 4.75613457,7.40011601 C5.10134571,8.08446404 5.94372622,8.88988863 7.45907193,8.72455684 C5.7743109,9.45070998 6.77212065,10.7954664 8.1430116,10.5949142 C5.80437587,13.0104733 2.11725754,12.832942 0,10.8125661 C5.5280232,18.3452436 17.5446682,15.2673875 19.3354478,8.01198144 C20.6771415,8.02341531 21.4658747,7.54722506 21.9549281,7.02223666 C21.1819165,7.15341995 20.0614988,7.01784687 19.4673968,6.77043619 Z"
+                                                id="Twitter__x28_alt_x29_"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="github-icon">
+                            <a href="https://github.com/SinghDigamber" target="_blank" rel="noopener noreferrer">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github-alt"
+                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512">
+                                    <path fill="#ffffff"
+                                        d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"
+                                        class=""></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="youtube-icon">
+                            <a href="https://www.youtube.com/channel/UCIf1tGU8-Tv0tFNoS_reV8Q/videos" target="_blank"
+                                rel="noopener noreferrer">
+                                <svg viewBox="0 0 18 13" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="youtube-play-button" fill="#ffffff" fill-rule="nonzero">
+                                            <path
+                                                d="M18,2.7916 C18,1.305 16.7958,0.1 15.31,0.1 L2.69,0.1 C1.2042,0.1 0,1.305 0,2.7916 L0,10.0084 C0,11.495 1.2042,12.7 2.69,12.7 L15.31,12.7 C16.7958,12.7 18,11.495 18,10.0084 L18,2.7916 Z M7.2,9.445 L7.2,2.666 L12.3404,6.0554 L7.2,9.445 Z"
+                                                id="YouTube__x28_alt_x29_"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="sitelinks-nav">
+                    <ul>
+                        <li><a href="https://www.positronx.io/about/">About</a></li>
+                        <!-- <li><a href="<#?php echo esc_url(get_permalink(1758)); ?>">Advertise</a></li> -->
+                        <li><a href="https://www.positronx.io/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="https://www.positronx.io/feed/">RSS</a></li>
+                        <li><a href="https://www.positronx.io/contact/">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <header class="navigation">
+        <div class="nav-container">
+            <div class="inner-header">
+                <div class="brand">
+                    <a href="https://www.positronx.io">
+                        <img src="https://www.positronx.io/wp-content/themes/positronx/img/logo-positronx-white.svg" alt="positronX.io - Learn Full Stack Development">
+                    </a>
+                </div>
+                <ul class="responsive-nav-items">
+                    <li>
+                        <a href="javascript:void(0)" class="custom-search">
+                            <svg height="18" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="search"
+                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="search">
+                                <path fill="#000000"
+                                    d="M508.5 481.6l-129-129c-2.3-2.3-5.3-3.5-8.5-3.5h-10.3C395 312 416 262.5 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c54.5 0 104-21 141.1-55.2V371c0 3.2 1.3 6.2 3.5 8.5l129 129c4.7 4.7 12.3 4.7 17 0l9.9-9.9c4.7-4.7 4.7-12.3 0-17zM208 384c-97.3 0-176-78.7-176-176S110.7 32 208 32s176 78.7 176 176-78.7 176-176 176z"
+                                    class=""></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li data-drawer-open>
+                        <a href="javascript:void(0)" class="custom-search-2">
+                            <svg height="18" viewBox="0 0 18 12" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="round-menu-24px" transform="translate(-3.000000, -6.000000)">
+                                        <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                                        <path
+                                            d="M4,18 L20,18 C20.55,18 21,17.55 21,17 C21,16.45 20.55,16 20,16 L4,16 C3.45,16 3,16.45 3,17 C3,17.55 3.45,18 4,18 Z M4,13 L20,13 C20.55,13 21,12.55 21,12 C21,11.45 20.55,11 20,11 L4,11 C3.45,11 3,11.45 3,12 C3,12.55 3.45,13 4,13 Z M3,7 C3,7.55 3.45,8 4,8 L20,8 C20.55,8 21,7.55 21,7 C21,6.45 20.55,6 20,6 L4,6 C3.45,6 3,6.45 3,7 Z"
+                                            id="Shape" fill="#000000" fill-rule="nonzero"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="top-ad-block-psx">
+                                                        </div>
+
+            </div> 
+        </div>
+    </header>
+    <!-- Navbar -->
+    <div class="nav-container main-header-mob">
+        <nav class="main-hz-navbar ">
+            <ul class="navbar-left">
+                <li><a id="GA-navtop-angular" href="https://www.positronx.io/free-angular-tutorials/">Angular</a></li>
+                <li><a href="https://www.positronx.io/react-native/">React Native</a></li>
+                <li><a href="https://www.positronx.io/ionic/">Ionic</a></li>
+                <li><a href="https://www.positronx.io/react-js/">React</a></li>
+                <li><a href="https://www.positronx.io/free-firebase-tutorials/">Firebase</a></li>
+                <li class="hideon-below-800"><a href="https://www.positronx.io/node-js/">Node</a></li>
+                <li class="hideon-below-800"><a href="https://www.positronx.io/interview-questions/">Interview Questions</a></li>
+            </ul>
+            <ul class="navbar-right">
+                <li>
+                    <a href="javascript:void(0)" class="custom-search">
+                        <svg height="18" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="search"
+                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="search">
+                            <path fill="#000000"
+                                d="M508.5 481.6l-129-129c-2.3-2.3-5.3-3.5-8.5-3.5h-10.3C395 312 416 262.5 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c54.5 0 104-21 141.1-55.2V371c0 3.2 1.3 6.2 3.5 8.5l129 129c4.7 4.7 12.3 4.7 17 0l9.9-9.9c4.7-4.7 4.7-12.3 0-17zM208 384c-97.3 0-176-78.7-176-176S110.7 32 208 32s176 78.7 176 176-78.7 176-176 176z"
+                                class=""></path>
+                        </svg>
+                    </a>
+                </li>
+                <li data-drawer-open>
+                    <a href="javascript:void(0)" class="custom-search-2">
+                        <svg height="18" viewBox="0 0 18 12" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="round-menu-24px" transform="translate(-3.000000, -6.000000)">
+                                    <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                                    <path
+                                        d="M4,18 L20,18 C20.55,18 21,17.55 21,17 C21,16.45 20.55,16 20,16 L4,16 C3.45,16 3,16.45 3,17 C3,17.55 3.45,18 4,18 Z M4,13 L20,13 C20.55,13 21,12.55 21,12 C21,11.45 20.55,11 20,11 L4,11 C3.45,11 3,11.45 3,12 C3,12.55 3.45,13 4,13 Z M3,7 C3,7.55 3.45,8 4,8 L20,8 C20.55,8 21,7.55 21,7 C21,6.45 20.55,6 20,6 L4,6 C3.45,6 3,6.45 3,7 Z"
+                                        id="Shape" fill="#000000" fill-rule="nonzero"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div id="search">
+        <button type="button" class="close">×</button>
+        <form role="search" method="get" class="nav-search" action="https://www.positronx.io/">
+            <input type="search" placeholder="Type keywrods, press enter..." value=""
+                name="s" title="Search">
+        </form>
+    </div><main id="main-content">
+	<div class="container-wrapper">
+		<div class="grid">
+			<section class="main-content">
+				<section class="content">
+					<section class="page-body">
+						<section class="article-preview-section">
+							<h1>Free Fullstack Development Tutorials</h1>
+															<article class="article-preview">
+									<div class="image-thumbnail">
+										<a href="https://www.positronx.io/handle-ajax-requests-in-vue-js-with-axios-fetch-api/">
+																						<img src="https://www.positronx.io/wp-content/uploads/2020/04/vue-150-150-1.jpg" alt="vue js tutorial">
+																				</a>
+								</div>
+								<div class="preview-title">
+									<h2>
+										<a href="https://www.positronx.io/handle-ajax-requests-in-vue-js-with-axios-fetch-api/">
+											Handle AJAX Requests in Vue.js 2+ with Axios &#038; fetch API										</a>
+									</h2>
+									<div class="response"><time datetime="2020-04-10T04:59:03+00:00">April 10, 2020</time></div>
+								</div>
+								<div class="preview-excerpt">
+									<p>
+										This tutorial explains about making the Ajax Requests in Vue.js 2+ application using Axios and fetch API. Vue.js is a...									</p>
+								</div>
+							</article>
+															<article class="article-preview">
+									<div class="image-thumbnail">
+										<a href="https://www.positronx.io/vue-js-checkbox-tutorial-with-examples/">
+																						<img src="https://www.positronx.io/wp-content/uploads/2020/04/vue-150-150-1.jpg" alt="vue js tutorial">
+																				</a>
+								</div>
+								<div class="preview-title">
+									<h2>
+										<a href="https://www.positronx.io/vue-js-checkbox-tutorial-with-examples/">
+											Vue.js 2+ Checkbox Tutorial with Examples										</a>
+									</h2>
+									<div class="response"><time datetime="2020-04-08T22:55:46+00:00">April 8, 2020</time></div>
+								</div>
+								<div class="preview-excerpt">
+									<p>
+										This tutorial explains how to work with Form's Checkbox input in Vue.js 2+ using a v-model directive. A checkbox is...									</p>
+								</div>
+							</article>
+															<article class="article-preview">
+									<div class="image-thumbnail">
+										<a href="https://www.positronx.io/vue-js-forms-tutorial-form-validation-in-vue-with-vuelidate/">
+																						<img src="https://www.positronx.io/wp-content/uploads/2020/04/vue-150-150-1.jpg" alt="vue js tutorial">
+																				</a>
+								</div>
+								<div class="preview-title">
+									<h2>
+										<a href="https://www.positronx.io/vue-js-forms-tutorial-form-validation-in-vue-with-vuelidate/">
+											Vue.js 2+ Forms Tutorial &#8211; Form Validation in Vue with Vuelidate										</a>
+									</h2>
+									<div class="response"><time datetime="2020-04-07T22:28:21+00:00">April 7, 2020</time></div>
+								</div>
+								<div class="preview-excerpt">
+									<p>
+										This is a comprehensive Vue.js 2+ Form tutorial. In this tutorial, we are going to learn how to create Forms...									</p>
+								</div>
+							</article>
+															<article class="article-preview">
+									<div class="image-thumbnail">
+										<a href="https://www.positronx.io/vue-firebase-tutorial-integrate-cloud-firestore-with-vuefire/">
+																						<img src="https://www.positronx.io/wp-content/uploads/2020/04/vue-150-150-1.jpg" alt="vue js tutorial">
+																				</a>
+								</div>
+								<div class="preview-title">
+									<h2>
+										<a href="https://www.positronx.io/vue-firebase-tutorial-integrate-cloud-firestore-with-vuefire/">
+											Vue 2+ Firebase Tutorial &#8211; Integrate Cloud Firestore with VueFire										</a>
+									</h2>
+									<div class="response"><time datetime="2020-04-06T12:29:56+00:00">April 6, 2020</time></div>
+								</div>
+								<div class="preview-excerpt">
+									<p>
+										This is a step by step Vue.JS and Firebase tutorial, In this tutorial we are going to explain how to...									</p>
+								</div>
+							</article>
+															<article class="article-preview">
+									<div class="image-thumbnail">
+										<a href="https://www.positronx.io/create-progress-bar-component-in-ionic/">
+																						<img src="https://www.positronx.io/wp-content/uploads/2019/11/ionic-150x150.jpg" alt="Ionic 5 Tutorial">
+																				</a>
+								</div>
+								<div class="preview-title">
+									<h2>
+										<a href="https://www.positronx.io/create-progress-bar-component-in-ionic/">
+											Create Reusable Progress Bar Component in Ionic 5										</a>
+									</h2>
+									<div class="response"><time datetime="2020-04-04T22:45:43+00:00">April 4, 2020</time></div>
+								</div>
+								<div class="preview-excerpt">
+									<p>
+										This is a step by step tutorial about creating a reusable progress bar component in an Ionic 5 application. In...									</p>
+								</div>
+							</article>
+															<article class="article-preview">
+									<div class="image-thumbnail">
+										<a href="https://www.positronx.io/react-on-page-scroll-progress-bar-with-web-api-tutorial/">
+																						<img src="https://www.positronx.io/wp-content/uploads/2019/08/react-150x150.jpg" alt="React JS Tutorial">
+																				</a>
+								</div>
+								<div class="preview-title">
+									<h2>
+										<a href="https://www.positronx.io/react-on-page-scroll-progress-bar-with-web-api-tutorial/">
+											React On Page Scroll Progress Bar with Web API Tutorial										</a>
+									</h2>
+									<div class="response"><time datetime="2020-04-04T00:28:40+00:00">April 4, 2020</time></div>
+								</div>
+								<div class="preview-excerpt">
+									<p>
+										Do you want to display a progress bar on page scroll in React application? Well, then you are at the...									</p>
+								</div>
+							</article>
+															<article class="article-preview">
+									<div class="image-thumbnail">
+										<a href="https://www.positronx.io/react-pdf-tutorial-generate-pdf-in-react-with-jspdf/">
+																						<img src="https://www.positronx.io/wp-content/uploads/2019/08/react-150x150.jpg" alt="React JS Tutorial">
+																				</a>
+								</div>
+								<div class="preview-title">
+									<h2>
+										<a href="https://www.positronx.io/react-pdf-tutorial-generate-pdf-in-react-with-jspdf/">
+											React PDF Tutorial &#8211; Generate PDF in React with jsPDF										</a>
+									</h2>
+									<div class="response"><time datetime="2020-04-03T20:30:06+00:00">April 3, 2020</time></div>
+								</div>
+								<div class="preview-excerpt">
+									<p>
+										In this tutorial, we are going to look at how we can easily export to PDF in React 16+ application...									</p>
+								</div>
+							</article>
+															<article class="article-preview">
+									<div class="image-thumbnail">
+										<a href="https://www.positronx.io/how-to-check-react-app-version-quickly/">
+																						<img src="https://www.positronx.io/wp-content/uploads/2020/02/react-native-150x150-1.jpg" alt="React Native Tutorial">
+																				</a>
+								</div>
+								<div class="preview-title">
+									<h2>
+										<a href="https://www.positronx.io/how-to-check-react-app-version-quickly/">
+											How to Check React App Version Quickly?										</a>
+									</h2>
+									<div class="response"><time datetime="2020-04-02T09:48:47+00:00">April 2, 2020</time></div>
+								</div>
+								<div class="preview-excerpt">
+									<p>
+										In this quick tutorial, we will learn how to check the React App version locally and globally. There are various...									</p>
+								</div>
+							</article>
+															<article class="article-preview">
+									<div class="image-thumbnail">
+										<a href="https://www.positronx.io/angular-pdf-tutorial-export-pdf-in-angular-with-jspdf/">
+																						<img src="https://www.positronx.io/wp-content/uploads/2018/09/angular_150x150.png" alt="Angular Tutorial">
+																				</a>
+								</div>
+								<div class="preview-title">
+									<h2>
+										<a href="https://www.positronx.io/angular-pdf-tutorial-export-pdf-in-angular-with-jspdf/">
+											Angular 9 PDF Tutorial &#8211; Export PDF in Angular with JSPDF										</a>
+									</h2>
+									<div class="response"><time datetime="2020-03-31T23:57:09+00:00">March 31, 2020</time></div>
+								</div>
+								<div class="preview-excerpt">
+									<p>
+										In this Angular 9 PDF tutorial, i am going to share with you how to export PDF file in Angular...									</p>
+								</div>
+							</article>
+															<article class="article-preview">
+									<div class="image-thumbnail">
+										<a href="https://www.positronx.io/how-to-globally-update-to-latest-angular-version/">
+																						<img src="https://www.positronx.io/wp-content/uploads/2018/09/angular_150x150.png" alt="Angular Tutorial">
+																				</a>
+								</div>
+								<div class="preview-title">
+									<h2>
+										<a href="https://www.positronx.io/how-to-globally-update-to-latest-angular-version/">
+											How To Globally Update to Latest Angular 9 Version?										</a>
+									</h2>
+									<div class="response"><time datetime="2020-03-30T20:55:40+00:00">March 30, 2020</time></div>
+								</div>
+								<div class="preview-excerpt">
+									<p>
+										In this tutorial we are going to get the answer for how to update Angular CLI to the latest version,...									</p>
+								</div>
+							</article>
+															<article class="article-preview">
+									<div class="image-thumbnail">
+										<a href="https://www.positronx.io/how-to-check-installed-angular-cli-version/">
+																						<img src="https://www.positronx.io/wp-content/uploads/2018/09/angular_150x150.png" alt="Angular Tutorial">
+																				</a>
+								</div>
+								<div class="preview-title">
+									<h2>
+										<a href="https://www.positronx.io/how-to-check-installed-angular-cli-version/">
+											How to Check Installed Angular CLI Version?										</a>
+									</h2>
+									<div class="response"><time datetime="2020-03-30T14:58:03+00:00">March 30, 2020</time></div>
+								</div>
+								<div class="preview-excerpt">
+									<p>
+										In this tutorial, we are going to find out how to check installed Angular CLI version using the command set...									</p>
+								</div>
+							</article>
+															<article class="article-preview">
+									<div class="image-thumbnail">
+										<a href="https://www.positronx.io/angular-material-progress-bar-tutorial-example/">
+																						<img src="https://www.positronx.io/wp-content/uploads/2019/05/angular-material_150x150.png" alt="Angular Material 9/8">
+																				</a>
+								</div>
+								<div class="preview-title">
+									<h2>
+										<a href="https://www.positronx.io/angular-material-progress-bar-tutorial-example/">
+											Angular 9 Material Progress Bar Tutorial Example										</a>
+									</h2>
+									<div class="response"><time datetime="2020-03-30T12:48:46+00:00">March 30, 2020</time></div>
+								</div>
+								<div class="preview-excerpt">
+									<p>
+										This is a step by step tutorial about how to create eye-catching progress bars in Angular 9 using Angular Material...									</p>
+								</div>
+							</article>
+															<article class="article-preview">
+									<div class="image-thumbnail">
+										<a href="https://www.positronx.io/react-native-build-validate-forms-with-formik-yup/">
+																						<img src="https://www.positronx.io/wp-content/uploads/2020/02/react-native-150x150-1.jpg" alt="React Native Tutorial">
+																				</a>
+								</div>
+								<div class="preview-title">
+									<h2>
+										<a href="https://www.positronx.io/react-native-build-validate-forms-with-formik-yup/">
+											React Native Build &#038; Validate Forms with Formik &#038; Yup										</a>
+									</h2>
+									<div class="response"><time datetime="2020-03-19T19:14:25+00:00">March 19, 2020</time></div>
+								</div>
+								<div class="preview-excerpt">
+									<p>
+										In this tutorial, I will walk you through how to create and validate forms in React Native application using Formik...									</p>
+								</div>
+							</article>
+															<article class="article-preview">
+									<div class="image-thumbnail">
+										<a href="https://www.positronx.io/top-gcp-certifications/">
+																						<img src="https://www.positronx.io/wp-content/uploads/2019/03/web-development_150x150.jpg" alt="web development tutorial">
+																				</a>
+								</div>
+								<div class="preview-title">
+									<h2>
+										<a href="https://www.positronx.io/top-gcp-certifications/">
+											Top GCP Certifications and How to Crack Them in 2020?										</a>
+									</h2>
+									<div class="response"><time datetime="2020-03-13T10:20:31+00:00">March 13, 2020</time></div>
+								</div>
+								<div class="preview-excerpt">
+									<p>
+										It has been 11 years since google joined the cloud computing race with its Google Cloud Platform. Since then, the...									</p>
+								</div>
+							</article>
+															<article class="article-preview">
+									<div class="image-thumbnail">
+										<a href="https://www.positronx.io/bootstrap-5-is-coming-expected-features-and-release-date/">
+																						<img src="https://www.positronx.io/wp-content/uploads/2018/09/bootstrap_150x150.png" alt="Bootstrap Tutorial">
+																				</a>
+								</div>
+								<div class="preview-title">
+									<h2>
+										<a href="https://www.positronx.io/bootstrap-5-is-coming-expected-features-and-release-date/">
+											Bootstrap 5 is Coming &#8211; Expected Features and Release Date										</a>
+									</h2>
+									<div class="response"><time datetime="2020-03-11T15:34:41+00:00">March 11, 2020</time></div>
+								</div>
+								<div class="preview-excerpt">
+									<p>
+										I am very much excited to tell you guys that Bootstrap 5 is coming. Yes, you heard it right, the...									</p>
+								</div>
+							</article>
+													<div class='pgntn-page-pagination pgntn-bottom'>
+							<div class="pgntn-page-pagination-block">
+																	<div class='pgntn-page-pagination-intro'>Page 1 of 21</div>
+								<span aria-current="page" class="page-numbers current">1</span>
+<a rel="nofollow" class="page-numbers" href="https://www.positronx.io/page/2/">2</a>
+<a rel="nofollow" class="page-numbers" href="https://www.positronx.io/page/3/">3</a>
+<span class="page-numbers dots">&hellip;</span>
+<a rel="nofollow" class="page-numbers" href="https://www.positronx.io/page/21/">21</a>
+<a rel="nofollow" class="next page-numbers" href="https://www.positronx.io/page/2/">Next »</a>							</div>
+							<div class="clear"></div>
+						</div>
+											</section>
+					</section>
+				</section>
+			</section>
+			<aside class="sidebar">    
+    <div class="custom-advert">
+                   
+    </div>
+
+    <!-- BSA AD -->
+    <!-- <div id="carbon-block"></div> -->
+
+    <div class="custom-advert">        
+                    </div>
+
+    <!-- Twitter Follow Box -->
+    <div class="custom-advert tweet-follow-box">
+        <a class="tweet-button" href="https://twitter.com/ImDigamberSingh" target="_blank">
+            <span class="followtext">Follow me on Twitter</span>
+            <span class="twitterusername">@ImDigamberSingh</span>
+        </a>
+    </div>
+
+    <div class="custom-advert">        
+                    </div>     
+
+    <div class="custom-advert affiliate-button do">
+        <a href="http://www.youtube.com/channel/UCIf1tGU8-Tv0tFNoS_reV8Q?sub_confirmation=1" rel="nofollow"
+            target="_blank">
+            <svg width="45px" viewBox="0 0 20 14" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="iconfinder_Youtube_3721679" transform="translate(-2.000000, -5.000000)">
+                        <rect id="Artboard15" x="0" y="0" width="24" height="24"></rect>
+                        <g id="Group" transform="translate(2.000000, 5.000000)">
+                            <path
+                                d="M0.093,4.075 C0.218,2.134 1.722,0.566 3.655,0.359 C5.66,0.157 7.791,0.048 10,0.048 C12.209,0.048 14.34,0.157 16.345,0.36 C18.278,0.566 19.782,2.134 19.907,4.075 C19.968,5.031 20,6.008 20,7 C20,7.992 19.968,8.969 19.907,9.925 C19.782,11.866 18.278,13.434 16.345,13.641 C14.34,13.843 12.209,13.952 10,13.952 C7.791,13.952 5.66,13.843 3.655,13.64 C1.722,13.434 0.218,11.866 0.093,9.925 C0.032,8.969 4.4408921e-16,7.992 4.4408921e-16,7 C4.4408921e-16,6.008 0.032,5.031 0.093,4.075 Z"
+                                id="Shape" fill="#FF0000"></path>
+                            <polygon id="Shape" fill="#FFFFFF" points="13.055 7 8.146 9.995 8.146 4.005"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            Subscribe on YouTube
+        </a>
+    </div>
+
+
+    <!-- <#?php if (is_singular('post')): ?>
+    <div class="custom-advert related-post">
+        <div class="fixed-sidebar-module">
+            <strong class="related-title">Online Courses (Affiliate)</strong>
+            <p class="affiliate-text">
+               If you like learning from videos, do check out the best online courses.
+            </p>
+            <a rel="sponsored" class="affliate-push-bottom" href="https://click.linksynergy.com/link?id=cVFctUS8Wzs&amp;offerid=507388.756150&amp;type=2&amp;murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-guide-to-angular-2%2F">
+               <strong class="affiliate-title">Angular 8 - The Complete Guide (2019+ Edition)</strong>
+               <img border="0" src="https://www.positronx.io/wp-content/uploads/2019/12/ng-complete-guide-affliate-01.jpg" alt="Angular 8 - The Complete Guide (2019+ Edition)">
+            </a>
+
+            <a rel="sponsored" class="affliate-push-bottom" href="https://click.linksynergy.com/link?id=cVFctUS8Wzs&offerid=507388.833442&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fangular-2-and-nodejs-the-practical-guide%2F">
+              <strong class="affiliate-title">Angular & NodeJS - The MEAN Stack Guide</strong>
+              <img border=0 src="https://i.udemycdn.com/course/480x270/833442_b26e_4.jpg" alt="Angular & NodeJS - The MEAN Stack Guide">
+            </a>
+            
+        </div>
+    </div>
+    <#?php else: ?>
+    <#?php endif;?> -->
+
+    <!-- The content -->
+    <!-- <#?php if (is_singular('post')): ?>
+        <div id="related-tutorial-event" class="custom-advert related-post popular-post-fixed">
+            <div class="fixed-sidebar-module">
+            <strong class="related-title">Related Posts</strong>
+                <#?php
+                $related = get_posts(array('category__in' => wp_get_post_categories($post->ID), 'numberposts' => 6, 'post__not_in' => array($post->ID)));
+                echo '<ul>';
+                if ($related) {
+                    foreach ($related as $post) {
+                        setup_postdata($post);?>
+                            <li>
+                                <a href="<#?php the_permalink()?>" rel="bookmark" title="<#?php the_title();?>">
+                                <span class="title_grd">
+                                    <#?php the_title();?>
+                                </span>
+                                </a>
+                            </li>
+                        <#?php }
+                }
+                echo '</ul>';
+                wp_reset_postdata();?>
+            </div>
+        </div>
+        <#?php else: ?>
+        <#?php endif;?> -->
+
+</aside>		</div>
+	</div>
+</main>
+
+<footer class="px-footer">
+    <div class="container-wrapper">
+        <ul class="footer-sitelinks">
+            <li class="copyright">&copy; 2016-2020 positronX.io - All Rights Reserved</li>
+            <li class="dmca"><a href="//www.dmca.com/Protection/Status.aspx?ID=f2ea991f-fd30-447c-99b5-2324779294ea"
+                    title="DMCA.com Protection Status" class="dmca-badge"> <img
+                        src="https://images.dmca.com/Badges/dmca_protected_sml_120l.png?ID=f2ea991f-fd30-447c-99b5-2324779294ea"
+                        alt="DMCA.com Protection Status" /></a></li>
+        </ul>
+    </div>
+</footer>
+
+
+<drawer-menu class="menu">
+    <span class="close-drawer" onclick="tinyDrawerClose(event)">
+        <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="round-close-24px" fill="#A8A8A8" fill-rule="nonzero">
+                    <path
+                        d="M13.3,0.71 C12.91,0.32 12.28,0.32 11.89,0.71 L7,5.59 L2.11,0.7 C1.72,0.31 1.09,0.31 0.7,0.7 C0.31,1.09 0.31,1.72 0.7,2.11 L5.59,7 L0.7,11.89 C0.31,12.28 0.31,12.91 0.7,13.3 C1.09,13.69 1.72,13.69 2.11,13.3 L7,8.41 L11.89,13.3 C12.28,13.69 12.91,13.69 13.3,13.3 C13.69,12.91 13.69,12.28 13.3,11.89 L8.41,7 L13.3,2.11 C13.68,1.73 13.68,1.09 13.3,0.71 Z"
+                        id="Path"></path>
+                </g>
+            </g>
+        </svg>
+    </span>
+
+    <div class="branding-block">
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <svg width="180px" height="34px" viewBox="0 0 216 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>logo-positronx-white</title>
+        <desc>Created with Sketch.</desc>
+        <defs></defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="logo-positronx-white" fill="#3740FE" fill-rule="nonzero">
+                <path d="M42.684094,11.5899796 C43.7132677,10.4360575 44.8385846,9.5914201 46.0600786,9.05604187 C47.2815727,8.52066364 48.5888115,8.25297854 49.9818345,8.25297854 C52.4144269,8.25297854 54.4935344,9.12620372 56.2192196,10.8726803 C57.9449048,12.6191568 58.8077344,14.7242532 58.8077344,17.1880327 C58.8077344,19.6933949 57.9501025,21.8244801 56.234813,23.5813524 C54.5195236,25.3382246 52.4560093,26.2166476 50.0442084,26.2166476 C48.6823725,26.2166476 47.4297102,25.9385669 46.2861839,25.3823973 C45.1426575,24.8262277 44.1083015,23.9815902 43.1830848,22.8484596 L43.1830848,32.3916588 L41,32.3917186 L41,16.190051 C41.1871225,14.6826755 41.7484815,13.1493336 42.684094,11.5899796 Z M49.794713,10.358096 C47.9026967,10.358096 46.3017839,11.0234104 44.9919264,12.3540592 C43.682069,13.684708 43.0271501,15.3427963 43.0271501,17.3283738 C43.0271501,18.6174399 43.3182252,19.784339 43.9003841,20.8291062 C44.4825429,21.8738734 45.3141859,22.7003187 46.3953381,23.3084668 C47.4764902,23.9166149 48.6199994,24.2206843 49.8258999,24.2206843 C51.011009,24.2206843 52.1259304,23.9166149 53.1706976,23.3084668 C54.2154649,22.7003187 55.0471079,21.8426868 55.6656517,20.7355454 C56.2841954,19.628404 56.5934627,18.4719005 56.5934627,17.266 C56.5934627,16.0393081 56.2867943,14.8854034 55.6734484,13.8042513 C55.0601025,12.7230991 54.2362561,11.8784617 53.2018846,11.2703136 C52.167513,10.6621655 51.0318005,10.358096 49.794713,10.358096 Z M71.298098,8.19060469 C73.9282085,8.19060469 76.1112715,9.1417964 77.8473523,11.0442084 C79.4171021,12.7906849 80.2019652,14.8541992 80.2019652,17.234813 C80.2019652,19.6154269 79.3703222,21.6971334 77.7070112,23.4799949 C76.0437002,25.2628563 73.9074171,26.1542737 71.298098,26.1542737 C68.6783832,26.1542737 66.5395013,25.2628563 64.8813881,23.4799949 C63.223275,21.6971334 62.3942308,19.6154269 62.3942308,17.234813 C62.3942308,14.8645949 63.1790939,12.8062784 64.7488437,11.0598018 C66.4849245,9.14699417 68.6679875,8.19060469 71.298098,8.19060469 Z M71.298098,10.3425025 C69.4788516,10.3425025 67.9143232,11.0182125 66.6044657,12.3696527 C65.2946083,13.7210929 64.6396894,15.3531923 64.6396894,17.266 C64.6396894,18.5030875 64.9385611,19.6595911 65.5363135,20.7355454 C66.1340659,21.8114997 66.942319,22.637945 67.961097,23.214906 C68.979875,23.791867 70.0921975,24.0803432 71.298098,24.0803432 C72.5247899,24.0803432 73.6449091,23.791867 74.6584892,23.214906 C75.6720694,22.637945 76.4751247,21.8114997 77.0676792,20.7355454 C77.6602337,19.6595911 77.9565066,18.5030875 77.9565066,17.266 C77.9565066,15.3531923 77.3015877,13.7210929 75.9917303,12.3696527 C74.6818729,11.0182125 73.1173444,10.3425025 71.298098,10.3425025 Z M92.8482634,10.4984372 L91.4448518,11.9642227 C90.2597427,10.8206963 89.1110358,10.2489418 87.9986965,10.2489418 C87.2813937,10.2489418 86.6680569,10.4828414 86.1586679,10.9506476 C85.649279,11.4184538 85.3945883,11.9746151 85.3945883,12.6191481 C85.3945883,13.1597242 85.6076968,13.6795011 86.0339202,14.1784944 C86.449748,14.7086747 87.3281709,15.3168137 88.6692154,16.0029295 C90.3117351,16.8449807 91.4240576,17.6610304 92.0062165,18.4511031 C92.5779796,19.2515716 92.8638569,20.1507856 92.8638569,21.1487722 C92.8638569,22.5417951 92.3726677,23.7242876 91.3902747,24.6962849 C90.4078816,25.6682823 89.1786093,26.1542737 87.7024208,26.1542737 C86.7148298,26.1542737 85.7714348,25.9437641 84.8722073,25.5227385 C83.9729798,25.1017129 83.2322977,24.5117661 82.6501388,23.7528805 L84.037957,22.1779407 C85.1606919,23.4462154 86.350981,24.0803432 87.60886,24.0803432 C88.4820983,24.0803432 89.2279781,23.7970648 89.8465219,23.2304995 C90.4650657,22.6639341 90.7743329,22.0012186 90.7743329,21.242333 C90.7743329,20.6081956 90.5716199,20.0468366 90.1661879,19.558239 C89.7607558,19.0696414 88.8407507,18.4563046 87.406145,17.7182104 C85.8571866,16.9385334 84.8072373,16.1536703 84.2562655,15.3635975 C83.694898,14.5943162 83.4142185,13.7106955 83.4142185,12.7127089 C83.4142185,11.4132471 83.8586278,10.3347101 84.7474596,9.47706536 C85.6362914,8.61942062 86.7512128,8.19060469 88.0922573,8.19060469 C89.6620071,8.19060469 91.2473266,8.95987449 92.8482634,10.4984372 Z M97.4951153,2 C97.9941086,2 98.4229246,2.17672414 98.781576,2.53017773 C99.1402274,2.88363132 99.3195505,3.30984837 99.3195505,3.80884167 C99.3195505,4.30783497 99.1402274,4.73665091 98.781576,5.09530234 C98.4229246,5.45395378 97.9941086,5.63327681 97.4951153,5.63327681 C96.996122,5.63327681 96.569905,5.45395378 96.2164514,5.09530234 C95.8629978,4.73665091 95.6862737,4.30783497 95.6862737,3.80884167 C95.6862737,3.30984837 95.8629978,2.88363132 96.2164514,2.53017773 C96.569905,2.17672414 96.996122,2 97.4951153,2 Z M96.4035729,9.03265167 L98.6022512,9.03265167 L98.6022512,26.1386802 L96.4035729,26.1386802 L96.4035729,9.03265167 Z M109.31496,23.7216935 C109.595644,24.5013706 109.824346,25.1095095 110.001072,25.5461287 C108.857546,25.9827478 107.838783,26.1854608 106.944754,26.1542737 C105.260651,26.0607125 103.930022,25.1874873 102.952827,23.534572 C102.360273,22.4950026 102.074395,21.3514934 102.095187,20.1040102 L102.095187,2.34305618 L104.309459,2.34305618 L104.309459,10.6075914 L108.379352,10.6075914 L108.379352,12.4944004 L104.325052,12.4944004 L104.325052,19.7297671 C104.262678,21.5178264 104.865619,22.8952352 106.133894,23.8620347 C107.173463,24.3506323 108.233808,24.3038524 109.31496,23.7216935 Z M112.667555,26.1074933 L112.667555,16.2524249 C112.833886,15.2232512 113.072983,14.3864104 113.384854,13.7418774 C114.112552,11.9538181 115.089733,10.6439803 116.316425,9.81232481 C117.543117,8.98066931 118.561879,8.56484779 119.372743,8.56484779 C119.975694,8.56484779 120.620217,8.76236301 121.306333,9.15739937 L120.16801,10.997428 C119.201211,10.6439744 118.242222,10.9298517 117.291016,11.8550684 C116.33981,12.7802852 115.682292,13.7886523 115.318443,14.8802002 C115.048155,15.8469997 114.913013,17.6610211 114.913013,20.3223187 L114.913013,26.1074933 L112.667555,26.1074933 Z M130.678004,8.19060469 C133.308114,8.19060469 135.491177,9.1417964 137.227258,11.0442084 C138.797008,12.7906849 139.581871,14.8541992 139.581871,17.234813 C139.581871,19.6154269 138.750228,21.6971334 137.086917,23.4799949 C135.423606,25.2628563 133.287323,26.1542737 130.678004,26.1542737 C128.058289,26.1542737 125.919407,25.2628563 124.261294,23.4799949 C122.603181,21.6971334 121.774137,19.6154269 121.774137,17.234813 C121.774137,14.8645949 122.559,12.8062784 124.12875,11.0598018 C125.86483,9.14699417 128.047893,8.19060469 130.678004,8.19060469 Z M130.678004,10.3425025 C128.858758,10.3425025 127.294229,11.0182125 125.984372,12.3696527 C124.674514,13.7210929 124.019595,15.3531923 124.019595,17.266 C124.019595,18.5030875 124.318467,19.6595911 124.916219,20.7355454 C125.513972,21.8114997 126.322225,22.637945 127.341003,23.214906 C128.359781,23.791867 129.472103,24.0803432 130.678004,24.0803432 C131.904696,24.0803432 133.024815,23.791867 134.038395,23.214906 C135.051975,22.637945 135.855031,21.8114997 136.447585,20.7355454 C137.04014,19.6595911 137.336412,18.5030875 137.336412,17.266 C137.336412,15.3531923 136.681494,13.7210929 135.371636,12.3696527 C134.061779,11.0182125 132.49725,10.3425025 130.678004,10.3425025 Z M143.620578,19.6517998 L143.589391,17.8273646 C143.558204,16.933335 143.594588,16.1744607 143.698545,15.5507191 C143.927251,13.585933 144.426236,12.146151 145.195518,11.2313299 C145.944008,10.4308615 146.70808,9.81232699 147.487757,9.37570785 C148.776823,8.82473608 150.247791,8.56484764 151.900707,8.59603472 C153.189773,8.59603472 154.382661,8.92089527 155.479406,9.57062614 C156.576152,10.220357 157.358416,11.0935822 157.826222,12.1903279 C158.294029,13.2870736 158.527928,15.0049362 158.527928,17.3439673 L158.527928,26.1386802 L156.344844,26.1386802 L156.344844,17.9832993 C156.344844,16.0081174 156.261679,14.6878841 156.095348,14.0225597 C155.835456,12.8894291 155.320877,12.0863738 154.551595,11.6133697 C153.782314,11.1403657 152.644003,10.9038672 151.136627,10.9038672 C149.805978,10.9038672 148.620887,11.2885021 147.581317,12.0577834 C146.541748,12.8270648 146.058356,13.8770141 146.131125,15.2076629 C145.933607,16.0601098 145.83485,17.6142427 145.83485,19.8701082 L145.83485,26.1386802 L143.620578,26.1386802 L143.620578,19.6517998 Z M162.348327,2.98238815 L165.045996,2.98238815 L170.581675,11.9954096 L176.164135,2.98238815 L178.84621,2.98238815 L171.9539,14.1784944 L179.282827,26.1074933 L176.600752,26.1074933 L170.581675,16.4083595 L164.547005,26.1074933 L161.849336,26.1074933 L169.225044,14.1784944 L162.348327,2.98238815 Z M185.192749,22.2715015 C185.72293,22.2715015 186.177735,22.4612201 186.557177,22.8406629 C186.93662,23.2201057 187.126339,23.6801083 187.126339,24.2206843 C187.126339,24.7508647 186.93662,25.2056695 186.557177,25.5851123 C186.177735,25.9645551 185.72293,26.1542737 185.192749,26.1542737 C184.652173,26.1542737 184.19477,25.9645551 183.820525,25.5851123 C183.44628,25.2056695 183.25916,24.7508647 183.25916,24.2206843 C183.25916,23.6801083 183.44628,23.2201057 183.820525,22.8406629 C184.19477,22.4612201 184.652173,22.2715015 185.192749,22.2715015 Z M192.428116,2 C192.927109,2 193.355925,2.17672414 193.714577,2.53017773 C194.073228,2.88363132 194.252551,3.30984837 194.252551,3.80884167 C194.252551,4.30783497 194.073228,4.73665091 193.714577,5.09530234 C193.355925,5.45395378 192.927109,5.63327681 192.428116,5.63327681 C191.929123,5.63327681 191.502906,5.45395378 191.149452,5.09530234 C190.795999,4.73665091 190.619275,4.30783497 190.619275,3.80884167 C190.619275,3.30984837 190.795999,2.88363132 191.149452,2.53017773 C191.502906,2.17672414 191.929123,2 192.428116,2 Z M191.336574,9.03265167 L193.535252,9.03265167 L193.535252,26.1386802 L191.336574,26.1386802 L191.336574,9.03265167 Z M206.165957,8.19060469 C208.796067,8.19060469 210.97913,9.1417964 212.715211,11.0442084 C214.284961,12.7906849 215.069824,14.8541992 215.069824,17.234813 C215.069824,19.6154269 214.238181,21.6971334 212.57487,23.4799949 C210.911559,25.2628563 208.775276,26.1542737 206.165957,26.1542737 C203.546242,26.1542737 201.40736,25.2628563 199.749247,23.4799949 C198.091134,21.6971334 197.26209,19.6154269 197.26209,17.234813 C197.26209,14.8645949 198.046953,12.8062784 199.616702,11.0598018 C201.352783,9.14699417 203.535846,8.19060469 206.165957,8.19060469 Z M206.165957,10.3425025 C204.34671,10.3425025 202.782182,11.0182125 201.472325,12.3696527 C200.162467,13.7210929 199.507548,15.3531923 199.507548,17.266 C199.507548,18.5030875 199.80642,19.6595911 200.404172,20.7355454 C201.001925,21.8114997 201.810178,22.637945 202.828956,23.214906 C203.847734,23.791867 204.960056,24.0803432 206.165957,24.0803432 C207.392649,24.0803432 208.512768,23.791867 209.526348,23.214906 C210.539928,22.637945 211.342983,21.8114997 211.935538,20.7355454 C212.528093,19.6595911 212.824365,18.5030875 212.824365,17.266 C212.824365,15.3531923 212.169446,13.7210929 210.859589,12.3696527 C209.549732,11.0182125 207.985203,10.3425025 206.165957,10.3425025 Z" id="positronX.io"></path>
+                <g id="Group-5">
+                    <path d="M27.0500443,17.0002594 C30.2241293,13.6093038 31.5873835,10.2963842 30.3031825,8.18941238 C29.5260437,6.91385897 27.9206293,6.24011231 25.6612217,6.24011231 C24.3986754,6.24011231 22.9640212,6.45217127 21.4297025,6.84395089 C20.1435448,2.66602068 18.0666377,0 15.6801711,0 C13.2937044,0 11.2167539,2.66597747 9.93063956,6.84390766 C8.39640715,6.45217127 6.9618833,6.24011231 5.69946762,6.24011231 C3.44005999,6.24011231 1.83464597,6.91385903 1.05750715,8.18941238 C0.00729134715,9.91251629 0.645630535,12.442871 2.85529258,15.3156331 C3.28712815,15.876887 3.78084092,16.4402161 4.30903613,17.0018158 C1.13612545,20.3921229 -0.22647682,23.7039617 1.05750709,25.8105876 C1.8346459,27.0854492 3.44005992,27.7598877 5.6998154,27.7598877 C5.6998154,27.7598877 5.6998154,27.7598877 5.7001633,27.7598877 C6.96236166,27.7598877 8.39666802,27.5478719 9.93068299,27.1561788 C11.2167974,31.334109 13.2937043,34 15.6801711,34 C18.0666378,34 20.1435448,31.3339793 21.4297025,27.1560491 C22.9640212,27.5478287 24.3986755,27.7598877 25.6612218,27.7598877 C27.9206294,27.7598877 29.5260438,27.0861409 30.3035304,25.8105876 C31.5872531,23.7036591 30.2239554,20.3911286 27.0500443,17.0002594 Z M25.6612217,7.65677898 C26.8707614,7.65677898 28.446259,7.87605795 29.0845982,8.92403157 C29.9302237,10.3116455 28.8059553,13.0122528 26.0439208,15.9818573 C25.0392323,15.0151189 23.8894825,14.0531362 22.6231098,13.117958 C22.4568286,11.357371 22.1804468,9.70793664 21.8092708,8.21383923 C23.2082251,7.85962932 24.517951,7.65677898 25.6612217,7.65677898 Z M18.6342725,21.8462728 C17.6513259,22.4384384 16.6628133,22.9677862 15.6803014,23.4545059 C14.6977896,22.9677862 13.709277,22.4384385 12.7264173,21.8462728 C11.8143054,21.2968216 10.9374587,20.7216034 10.1040086,20.1283137 C10.0256512,19.1271617 9.98068922,18.0848083 9.98068922,17 C9.98068922,15.9171371 10.0255643,14.8766861 10.1036608,13.877177 C10.9230222,13.2926204 11.7948683,12.7150675 12.7264173,12.1537272 C13.709277,11.5615616 14.6977462,11.0322138 15.6802581,10.5455374 C16.6627264,11.0322139 17.6511521,11.5615616 18.6339248,12.1537272 C19.5654738,12.7150675 20.4373199,13.2925771 21.2566813,13.8771337 C21.3347778,14.8766428 21.3796529,15.9171371 21.3796529,17 C21.3796529,18.0830358 21.3347778,19.1236598 21.2566378,20.1233419 C20.4373634,20.7077255 19.5656912,21.2851053 18.6342725,21.8462728 Z M21.0652665,21.9791717 C20.9057687,23.205958 20.6871332,24.3419977 20.427797,25.3907929 C19.4213692,25.073115 18.3815025,24.6812489 17.3181546,24.217097 C18.0042823,23.8540243 18.6905404,23.4689891 19.3724502,23.0581869 C19.9560869,22.7065709 20.5173297,22.3452276 21.0652665,21.9791717 Z M14.0424918,24.217097 C12.9790135,24.6813355 11.9391033,25.0732447 10.9325886,25.3909659 C10.6730785,24.3415655 10.4543125,23.2047908 10.2947712,21.9771399 C10.8464041,22.3457464 11.4079947,22.7086029 11.9882398,23.0581869 C12.6701496,23.468989 13.3563642,23.8540675 14.0424918,24.217097 Z M8.60412898,18.9972026 C7.7797663,18.3454615 7.01441155,17.6791509 6.31180353,17.0055771 C7.00045329,16.3416443 7.76245977,15.6714427 8.6040855,15.0037054 C8.57334255,15.6579107 8.55581875,16.3230541 8.55581875,17 C8.55581875,17.6772919 8.57334255,18.3426946 8.60412898,18.9972026 Z M10.2950321,12.0212174 C10.4545299,10.7942149 10.6731654,9.65800226 10.9325886,8.60907744 C11.9391469,8.92679854 12.9790135,9.31870782 14.0424484,9.78290302 C13.3563208,10.1459325 12.6701496,10.5310109 11.9882398,10.9418131 C11.4044726,11.2935588 10.8430993,11.6550319 10.2950321,12.0212174 Z M17.3181546,9.78290302 C18.3815025,9.31875105 19.4213257,8.92688496 20.427797,8.60920715 C20.6871332,9.65804544 20.9058556,10.7941717 21.06531,12.0210012 C20.5173732,11.6549022 19.9560869,11.2935155 19.3724501,10.9418131 C18.6905403,10.531011 18.0042823,10.1459758 17.3181546,9.78290302 Z M22.7562566,15.0037054 C23.5957074,15.6696701 24.3560615,16.3381424 25.0433632,17.0003459 C24.3560615,17.6625493 23.5957074,18.3309784 22.7562131,18.9969 C22.7869995,18.3424784 22.8045234,17.6771622 22.8045234,17 C22.8045234,16.3230108 22.7869995,15.6579106 22.7562566,15.0037054 Z M15.6801711,1.41666667 C17.2515377,1.41666667 18.923395,3.60240937 20.0481852,7.23560075 C18.6409691,7.67714186 17.169919,8.25629423 15.6803015,8.96021777 C14.190597,8.256251 12.7195035,7.67709857 11.3122003,7.23551427 C12.436947,3.60236616 14.1088043,1.41666667 15.6801711,1.41666667 Z M3.98725756,14.4544271 C2.18494981,12.1122233 1.56122109,10.0965169 2.27574355,8.92403157 C2.91443026,7.8760579 4.48992792,7.65677898 5.69946762,7.65677898 C6.84265139,7.65677898 8.15229031,7.85962932 9.55111477,8.2137527 C9.17989532,9.70793653 8.90355708,11.3574575 8.73723229,13.118131 C7.46738021,14.0559031 6.31506489,15.0206527 5.30837615,15.9900716 C4.82953475,15.4779307 4.37995791,14.9649684 3.98725756,14.4544271 Z M5.7001633,26.343221 L5.69946762,26.343221 C4.48992792,26.343221 2.91443027,26.1232503 2.27574355,25.0759684 C1.43029202,23.6887436 2.55473433,20.9882227 5.3169424,18.0184454 C6.33724146,18.9966405 7.48607804,19.9576289 8.73714532,20.8808747 C8.90342656,22.6419373 9.17985177,24.291804 9.55111477,25.7862905 C8.15250763,26.1403707 6.84312964,26.343221 5.7001633,26.343221 Z M15.6801711,32.5833333 C14.1088044,32.5833333 12.4369905,30.3976339 11.3122003,26.7645289 C12.71946,26.3229447 14.1906405,25.7437922 15.680345,25.0397822 C17.169919,25.7437058 18.640969,26.3228583 20.0481852,26.7643993 C18.923395,30.3975906 17.2515377,32.5833333 15.6801711,32.5833333 Z M29.0849461,25.0759684 C28.446259,26.1239421 26.8707614,26.343221 25.6612217,26.343221 C24.517951,26.343221 23.2082251,26.1403707 21.8092708,25.7861608 C22.1804468,24.2921499 22.456785,22.642802 22.6230663,20.8823446 C23.8893956,19.9472961 25.0391019,18.9854431 26.0437903,18.018748 C28.8058684,20.9883957 29.9303542,23.6888301 29.0849461,25.0759684 Z" id="Shape"></path>
+                    <path d="M15.6835195,13.5182394 C13.7570981,13.5182394 12.189996,15.0763187 12.189996,16.9916486 C12.189996,18.9069785 13.7570981,20.4650579 15.6835195,20.4650579 C17.6000105,20.4650579 19.177043,18.9069785 19.177043,16.9916486 C19.177043,15.0763187 17.6000105,13.5182394 15.6835195,13.5182394 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </svg>
+
+        <div id="search-block">
+            <form role="search" method="get" class="nav-search" action="https://www.positronx.io/">
+                <input type="text" placeholder="Search..." value="" name="s"
+                    title="Search">
+                <svg width="14px" height="18px" viewBox="0 0 17 18" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="round-search-24px" transform="translate(-1.000000, -1.000000)" fill="#8F8F8F"
+                            fill-rule="nonzero">
+                            <path
+                                d="M13.5,12 L12.71,12 L12.43,11.73 C13.63,10.33 14.25,8.42 13.91,6.39 C13.44,3.61 11.12,1.39 8.32,1.05 C4.09,0.53 0.53,4.09 1.05,8.32 C1.39,11.12 3.61,13.44 6.39,13.91 C8.42,14.25 10.33,13.63 11.73,12.43 L12,12.71 L12,13.5 L16.25,17.75 C16.66,18.16 17.33,18.16 17.74,17.75 C18.15,17.34 18.15,16.67 17.74,16.26 L13.5,12 Z M7.5,12 C5.01,12 3,9.99 3,7.5 C3,5.01 5.01,3 7.5,3 C9.99,3 12,5.01 12,7.5 C12,9.99 9.99,12 7.5,12 Z"
+                                id="Shape"></path>
+                        </g>
+                    </g>
+                </svg>
+            </form>
+        </div>
+    </div>
+
+    <ul class="sidebar-nav-01">
+        <li><a href="https://www.positronx.io/free-angular-tutorials">Angular</a></li>
+        <li><a href="https://www.positronx.io/react-native/">React Native</a></li>
+        <li><a href="https://www.positronx.io/ionic/">Ionic</a></li>
+        <li><a href="https://www.positronx.io/react-js">React</a></li>
+        <li><a href="https://www.positronx.io/free-firebase-tutorials/">Firebase</a></li>
+        <li><a href="https://www.positronx.io/mongodb/">MongoDB</a></li>
+        <li><a href="https://www.positronx.io/node-js/">Node JS</a></li>
+        <li><a href="https://www.positronx.io/angular-material/">Angular Material</a></li>
+        <li><a href="https://www.positronx.io/interview-questions/">Interview Questions</a></li>
+        
+        <li><a href="https://www.positronx.io/python/">Python</a></li>
+        <li><a href="https://www.positronx.io/php/">PHP</a></li>
+        <li><a href="https://www.positronx.io/free-javascript-tutorials/">JavaScript</a></li>
+        <li><a href="https://www.positronx.io/free-typescript-tutorials/">TypeScript</a></li>
+        <li><a href="https://www.positronx.io/free-rxjs-tutorials/">RxJS</a></li>
+        <li><a href="https://www.positronx.io/free-html5-css3-tutorials/">HTML5 & CSS3</a></li>
+        <li><a href="https://www.positronx.io/free-bootstrap-tutorials/">Bootstrap 4</a></li>
+
+        <li><a href="https://www.positronx.io/about/">About</a></li>
+        <li><a href="https://www.positronx.io/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="https://www.positronx.io/contact/">Contact</a></li>
+    </ul>
+</drawer-menu>
+
+<!-- Cookee consent -->
+<script>
+if (navigator.cookieEnabled === true) {
+    if (document.cookie.indexOf("visited") == -1) {
+        jQuery('body').prepend(
+            '<div id="cookie"><div id="wrapper-cookee"><p>This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies. <a href="https://www.positronx.io/privacy-policy/" rel="nofollow">Read more</a></p><div id="close"><a href="javascript:void(0)" id="closecookie">OK</a></div><div></div></div></div>'
+        );
+        jQuery('#cookie').fadeIn("fast");
+        jQuery('#closecookie').click(function() {
+            jQuery('#cookie').fadeOut("fast");
+        });
+        document.cookie = "visited=yes; expires=Thu,31 Dec 2025 23:59:59 UTC; path=/";
+    }
+}
+</script>
+
+<!-- DMCA Protection -->
+<script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+
+<script>
+jQuery.noConflict();
+(function($) {
+
+    // Fixed Sidebar
+    //     <#?php
+    // if (is_singular('post')): ?>
+    //         var fixmeTop = $('.web-development-sidebar').offset().top + 500;
+    //     $(window).scroll(function() {
+    //         var currentScroll = $(window).scrollTop();
+    //         if (currentScroll >= fixmeTop) {
+    //             $('.web-development-sidebar').addClass('sticky-adbar');
+    //         } else {
+    //             $('.web-development-sidebar').removeClass('sticky-adbar');
+    //         }
+    //     }); <#?php else: ?>
+    //         <#?php endif;?>
+
+    // Custom search
+    $('.custom-search').on("click", function(event) {
+        event.preventDefault();
+        $("#search").addClass("open");
+        $('#search > form > input[type="search"]').focus();
+    });
+
+    $("#search, #search button.close").on("click keyup", function(event) {
+        if (
+            event.target == this ||
+            event.target.className == "close" ||
+            event.keyCode == 27
+        ) {
+            $(this).removeClass("open");
+        }
+    });
+
+    // Smooth scroll
+    $('.OrderedList li a').click(function() {
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 500);
+        return false;
+    });
+})(jQuery);
+</script>
+
+<!-- Responsive Menu -->
+<script>
+class TinyDrawer {
+    constructor(e) {
+        this.o = Object.assign({}, this.defaults(), e)
+    }
+    load() {
+        document.addEventListener("DOMContentLoaded", () => {
+            this.backdropAdd(), this.setup(), this.triggerOpen(), this.triggerClose(), this.activeUnset()
+        })
+    }
+    defaults() {
+        return {
+            replacement: "drawer",
+            drawerSelector: "drawer-menu"
+        }
+    }
+    setup() {
+        this.elementDrawer = document.querySelector(this.o.drawerSelector), this.elementOpen = document
+            .querySelectorAll("[data-" + this.o.replacement + "-open]"), this.elementClose = document
+            .querySelectorAll("[data-" + this.o.replacement + "-backdrop], [data-" + this.o.replacement + "-close]")
+    }
+    triggerOpen() {
+        this.elementOpen.forEach(e => {
+            e.addEventListener("click", e => {
+                this.open(e.target)
+            })
+        })
+    }
+    triggerClose() {
+        this.elementClose.forEach(e => {
+            e.addEventListener("click", e => {
+                this.close(e.target)
+            })
+        })
+    }
+    activeUnset() {
+        document.body.dataset[this.o.replacement] = ""
+    }
+    activeSet() {
+        document.body.dataset[this.o.replacement] = !0
+    }
+    offsetTopToVariable() {
+        var e = document.body.getBoundingClientRect();
+        this.top = -e.top
+    }
+    open(e = null) {
+        this.activeSet(), this.offsetTopToVariable(), this.callback(e, "open")
+    }
+    close(e = null) {
+        this.activeUnset(), window.scrollTo(0, this.top), this.callback(e, "close")
+    }
+    backdropAdd() {
+        let e = document.createElement("div");
+        e.dataset[this.o.replacement + "Backdrop"] = "", document.body.appendChild(e)
+    }
+    callback(e, t) {
+        void 0 !== this.o.callback && this.o.callback(e, t)
+    }
+}
+var tinyDrawerObj;
+
+function tinyDrawer(e) {
+    return (tinyDrawerObj = new TinyDrawer(e)).load(), tinyDrawerObj
+}
+
+function tinyDrawerOpen(e = null) {
+    let t = e ? e.target : null;
+    tinyDrawerObj.open(t)
+}
+
+function tinyDrawerClose(e = null) {
+    let t = e ? e.target : null;
+    tinyDrawerObj.close(t)
+}
+tinyDrawer({
+    callback: function(element, action) {
+        console.log(element);
+        console.log(action);
+    }
+});
+</script>
+
+<!-- Add this -->
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bc18acdd0987bc0"></script>
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<!-- BuySell -->
+<!-- Load the following script before </head>. You only have to load this script once even if you have multiple ads on the same page. E.g. Flex Bar + FancyBar on the homepage. -->
+<script type="text/javascript" src="//m.servedby-buysellads.com/monetization.js"></script>
+<!-- Load this code where you would like to display the ad on your site. -->
+<div id="logobar"></div>
+
+<!-- Load this function before end of </body>. Make sure to disable async for the script. -->
+<script>
+(function() {
+  if (typeof _bsa !== 'undefined' && _bsa) {
+    _bsa.init('custom', 'CE7DVKQU', 'placement:positronxio',
+    {
+      target: '#logobar',
+      template: `
+        <a href="##link##" class="native-flex">
+        <div class="native-img" style="background-color: ##backgroundColor##"><img src="##logo##"></div>
+        <div class="native-desc"><span class="native-sponsor">Sponsored</span>##description##</div>
+        <span class="native-cta" style="border-bottom: solid 2px #ffffff;">##callToAction##</span>
+        </a>`
+        }
+      );
+  }
+})();
+</script>
+
+<script type="text/javascript" src="//m2d.m2.ai/pg.positronx.io.js" async></script>
+</body>
+
+</html>
