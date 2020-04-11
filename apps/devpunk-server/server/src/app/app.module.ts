@@ -5,7 +5,6 @@ import { join } from 'path';
 import { ScheduleModule } from '@nestjs/schedule';
 import { AppController } from './app.controller';
 import { DbService } from './services/db.service';
-import { CronService } from './services/cron.service';
 import { FeedController } from './controllers/feeds.controller';
 import { SitesController } from './controllers/sites.controller';
 import { FetchService } from './services/fetch.service';
@@ -13,6 +12,7 @@ import { RssService } from './services/rss.service';
 import { StorageService } from './services/storage.service';
 import { StaticController } from './controllers/static.controller';
 import { LoggerModule } from 'nestjs-pino';
+import { CronController } from './controllers/cron.controller';
 
 @Module({
   imports: [ScheduleModule.forRoot(), LoggerModule.forRoot()],
@@ -20,8 +20,9 @@ import { LoggerModule } from 'nestjs-pino';
     AppController,
     FeedController,
     SitesController,
-    StaticController
+    StaticController,
+    CronController
   ],
-  providers: [DbService, FetchService, RssService, StorageService, CronService]
+  providers: [DbService, RssService, FetchService, StorageService]
 })
 export class AppModule {}

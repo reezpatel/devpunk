@@ -5,7 +5,7 @@ import { SitesEntry, FeedEntry } from '@devpunk/models';
 import axios from 'axios';
 import { DbService } from './db.service';
 import { Inject } from '@nestjs/common';
-import { Logger } from 'pino';
+import { Logger } from 'nestjs-pino';
 
 const SITES_TABLE = DbService.SITES_TABLE;
 const FEEDS_TABLE = DbService.FEEDS_TABLE;
@@ -21,6 +21,10 @@ export class StorageService {
     @Inject('Logger') private readonly logger: Logger
   ) {
     if (!existsSync(DATA_PATH)) {
+      this.logger.error(
+        '[STORAGE]',
+        `${DATA_PATH} Doesn't Exist... Exiting!!!`
+      );
       process.exit(0);
     }
 
@@ -30,8 +34,6 @@ export class StorageService {
       }
     });
   }
-
-  getImage(type: string, id: string) {}
 
   storeFeedImages(ids: string[] = []) {
     const _promises = ids.map(async id => {
@@ -50,7 +52,7 @@ export class StorageService {
             res.data.pipe(createWriteStream(path));
           }
         } catch (e) {
-          this.logger.error('[STORAGE]', e);
+          this.logger.error('[STORAGE]', `{${feed.image}}`, e.message);
         }
       }
     });
@@ -66,13 +68,15 @@ export class StorageService {
         id
       );
 
+      let imageURL = '';
+
       if (!existsSync(path)) {
         try {
           const domain = new URL(site.website).hostname;
           const url = `http://favicongrabber.com/api/grab/${domain}`;
 
           const response = (await axios.get(url)).data;
-          let imageURL = response?.icons?.[0]?.src ?? '';
+          imageURL = response?.icons?.[0]?.src ?? '';
 
           (response?.icons ?? []).forEach(
             (data: { src: string; sizes?: string }) => {
@@ -89,7 +93,7 @@ export class StorageService {
             res.data.pipe(createWriteStream(path));
           }
         } catch (e) {
-          this.logger.error('[STORAGE]', e);
+          this.logger.error('[STORAGE]', `{${imageURL}}`, e.message);
         }
       }
     });

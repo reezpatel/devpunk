@@ -6,14 +6,11 @@ RUN yarn
 COPY . /app
 RUN yarn run build
 
-FROM ubuntu:latest
-RUN apt-get update && \
-    apt-get install nodejs npm -y 
+FROM mhart/alpine-node:10.20.0
 WORKDIR /app
 COPY --from=builder /app/package.json /app/package.json
 COPY --from=builder /app/yarn.lock /app/yarn.lock
 COPY --from=builder /app/dist /app/dist
 COPY --from=builder /app/node_modules /app/node_modules
-ARG NODE_ENV=production
-ARG PORT=3000
-CMD ["npm", "run", "start:server"]
+RUN mkdir -p /usr/data/app
+CMD ["node", "dist/apps/devpunk-server/server/main.js"]

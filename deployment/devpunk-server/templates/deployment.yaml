@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "devpunk-server.fullname" . }}
+  labels:
+    app: {{ template "devpunk-server.name" . }}
+    chart: {{ template "devpunk-server.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+  annotations:
+    rollme: {{ randAlphaNum 5 | quote }}
+{{ toYaml .Values.annotations | indent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "devpunk-server.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "devpunk-server.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts:
+{{ toYaml .Values.volumeMounts | indent 10 }}
+          envFrom:
+            - configMapRef:
+                name: {{ .Values.configMap }}
+          ports:
+            - name: http
+              containerPort: 3333
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /v1
+              port: 3333
+          readinessProbe:
+            httpGet:
+              path: /v1
+              port: 3333
+      volumes:
+{{ toYaml .Values.pvc | indent 8 }}
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}

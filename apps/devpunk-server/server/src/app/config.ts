@@ -1,8 +1,8 @@
 const APP_CONFIG = {
   DB_HOST: process.env.DB_HOST || 'localhost',
   DB_PORT: process.env.DB_PORT || '28015',
-  DB_USERNAME: process.env.DB_HOST || 'admin',
-  DB_PASSWORD: process.env.DB_HOST || 'rethinkdb',
+  DB_USERNAME: process.env.DB_USERNAME || 'admin',
+  DB_PASSWORD: process.env.DB_PASSWORD || 'rethinkdb',
   DB_NAME: process.env.DB_NAME || 'dev_punk',
   RPP: process.env.RESULT_PER_PAGE || 30,
   DATA_PATH:

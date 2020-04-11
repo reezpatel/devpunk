@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata: 
+  name: devpunk-config
+data:
+  DB_HOST: localhost
+  DB_PORT: "28015"
+  DB_USERNAME: <username>
+  DB_PASSWORD: <password>
+  DB_NAME: dev_punk
+  RPP: "30"
+  DATA_PATH: /usr/share/devpunk
+  DATA_FOLDER: devpunk_static

@@ -6,25 +6,24 @@ import * as helmet from 'helmet';
 import { join } from 'path';
 import { APP_CONFIG } from './app/config';
 
-const { DATA_PATH, DATA_FOLDER } = APP_CONFIG;
-
 async function bootstrap() {
-  const app = await NestFactory.create<NestExpressApplication>(AppModule);
-  const globalPrefix = 'v1';
+  try {
+    const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
-  app.use(helmet());
-  app.setGlobalPrefix(globalPrefix);
-  app.useGlobalPipes(
-    new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true })
-  );
-  // app.useStaticAssets(join(DATA_PATH, DATA_FOLDER), {
-  //   prefix: '/v1/static'
-  // });
+    const globalPrefix = 'v1';
 
-  const port = process.env.port || 3333;
-  await app.listen(port, () => {
-    console.log('Listening at Port: ' + port + '/' + globalPrefix);
-  });
+    app.use(helmet());
+    app.setGlobalPrefix(globalPrefix);
+    app.useGlobalPipes(
+      new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true })
+    );
+    const port = process.env.port || 3333;
+    await app.listen(port, '0.0.0.0', () => {
+      console.log('Listening at Port: ' + port + '/' + globalPrefix);
+    });
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 bootstrap();

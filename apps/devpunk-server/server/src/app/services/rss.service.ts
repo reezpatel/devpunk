@@ -63,7 +63,6 @@ export class RssService {
     for (const entry of data.items) {
       const feed = await this.mapFeeds(meta, entry);
       if (feed) {
-        console.log('here');
         feeds.push(feed);
       }
     }

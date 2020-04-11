@@ -40,3 +40,4 @@ Thumbs.db
 
 # Static Files
 /devpunk_static/*
+dist/*
