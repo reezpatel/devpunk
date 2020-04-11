@@ -18,5 +18,12 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "devpunk-server-server": {
+      "tags": []
+    },
+    "models": {
+      "tags": []
+    }
+  }
 }
