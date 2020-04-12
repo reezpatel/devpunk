@@ -43,10 +43,10 @@ spec:
             httpGet:
               path: /v1
               port: 3333
-      volumes:
-{{ toYaml .Values.pvc | indent 8 }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
+      volumes:
+{{ toYaml .Values.pvc | indent 8 }}
     {{- with .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml . | indent 8 }}
