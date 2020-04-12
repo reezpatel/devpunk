@@ -62,15 +62,20 @@ export class RssService {
   }
 
   async parse(meta: any, url: string) {
-    const data = await this.parser.parseURL(url);
-    const feeds = [];
-    for (const entry of data.items) {
-      const feed = await this.mapFeeds(meta, entry);
-      if (feed) {
-        this.logger.verbose('RSS', `{{ ${feed.title} }} Done`);
-        feeds.push(feed);
+    try {
+      const data = await this.parser.parseURL(url);
+      const feeds = [];
+      for (const entry of data.items) {
+        const feed = await this.mapFeeds(meta, entry);
+        if (feed) {
+          this.logger.verbose('RSS', `{{ ${feed.title} }} Done`);
+          feeds.push(feed);
+        }
+        return feeds;
       }
+    } catch (e) {
+      this.logger.error('RSS', e.message);
+      return [];
     }
-    return feeds;
   }
 }

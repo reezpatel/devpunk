@@ -5,7 +5,7 @@ export class Logger implements LoggerService {
     console[severity](
       `[${context}]`,
       ...message.map(m => {
-        if (m instanceof Error) {
+        if (m instanceof Error && m.message) {
           return m.message;
         }
         try {
