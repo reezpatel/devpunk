@@ -5,7 +5,7 @@ import { SitesEntry, FeedEntry } from '@devpunk/models';
 import axios from 'axios';
 import { DbService } from './db.service';
 import { Inject } from '@nestjs/common';
-import { Logger } from 'nestjs-pino';
+import { Logger } from './logger.service';
 
 const SITES_TABLE = DbService.SITES_TABLE;
 const FEEDS_TABLE = DbService.FEEDS_TABLE;
@@ -52,7 +52,7 @@ export class StorageService {
             res.data.pipe(createWriteStream(path));
           }
         } catch (e) {
-          this.logger.error('[STORAGE]', `{${feed.image}}`, e.message);
+          this.logger.error('STORAGE', `{${feed.image}} ${e.message}`);
         }
       }
     });
@@ -93,7 +93,7 @@ export class StorageService {
             res.data.pipe(createWriteStream(path));
           }
         } catch (e) {
-          this.logger.error('[STORAGE]', `{${imageURL}}`, e.message);
+          this.logger.error('STORAGE', `{{ ${imageURL} }} ${e.message}`);
         }
       }
     });

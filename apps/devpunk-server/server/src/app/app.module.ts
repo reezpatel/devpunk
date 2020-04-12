@@ -11,11 +11,11 @@ import { FetchService } from './services/fetch.service';
 import { RssService } from './services/rss.service';
 import { StorageService } from './services/storage.service';
 import { StaticController } from './controllers/static.controller';
-import { LoggerModule } from 'nestjs-pino';
 import { CronController } from './controllers/cron.controller';
+import { Logger } from './services/logger.service';
 
 @Module({
-  imports: [ScheduleModule.forRoot(), LoggerModule.forRoot()],
+  imports: [ScheduleModule.forRoot()],
   controllers: [
     AppController,
     FeedController,
@@ -23,6 +23,6 @@ import { CronController } from './controllers/cron.controller';
     StaticController,
     CronController
   ],
-  providers: [DbService, RssService, FetchService, StorageService]
+  providers: [Logger, DbService, RssService, FetchService, StorageService]
 })
 export class AppModule {}

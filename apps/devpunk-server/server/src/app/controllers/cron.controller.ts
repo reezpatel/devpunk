@@ -1,11 +1,11 @@
 import { Controller, Get, Injectable } from '@nestjs/common';
 import { SitesEntry } from '@devpunk/models';
 
-import { Logger } from 'nestjs-pino';
 import { DbService } from '../services/db.service';
 import { FetchService } from '../services/fetch.service';
 import { StorageService } from '../services/storage.service';
 import { Cron } from '@nestjs/schedule';
+import { Logger } from '../services/logger.service';
 
 const SITES_TABLE = DbService.SITES_TABLE;
 const FEEDS_TABLE = DbService.FEEDS_TABLE;
@@ -31,7 +31,7 @@ export class CronController {
   }
 
   private async fetchLatestFeeds() {
-    this.logger.log('[CRON]', 'Starting Batch Job');
+    this.logger.log('Starting Batch Job', 'CRON');
     const timeStart = new Date();
     const sites = await this.dbService.listEntries<SitesEntry>(SITES_TABLE, {
       limit: 100000
@@ -40,16 +40,16 @@ export class CronController {
     const feeds = [];
     for (const site of sites) {
       const start = new Date().getTime();
-      this.logger.log(`[${site.name}]`, 'Fetching Feeds...');
+      this.logger.log(site.name, 'Fetching Feeds...');
       const entries = await this.fetchService.fetchFeedsFrom(site);
 
       const res = await this.dbService.addEntry(FEEDS_TABLE, entries);
-      this.logger.log(`[${site.name}]`, 'Saving Images...');
+      this.logger.log(site.name, 'Saving Images...');
       await this.storageService.storeFeedImages(res.generated_keys);
 
       const end = new Date().getTime();
       this.logger.log(
-        `[${site.name}]`,
+        site.name,
         JSON.stringify({
           status: 'SUCCESS',
           data: {
@@ -65,7 +65,7 @@ export class CronController {
     const timeEnd = new Date();
 
     this.logger.log(
-      '[CRON]',
+      'CRON',
       JSON.stringify({
         status: 'SUCCESS',
         data: {

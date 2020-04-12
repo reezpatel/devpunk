@@ -3,12 +3,16 @@ import { Inject } from '@nestjs/common';
 import { DbService } from './db.service';
 import axios from 'axios';
 import cheerio from 'cheerio';
+import { Logger } from './logger.service';
 
 const FEEDS_TABLE = DbService.FEEDS_TABLE;
 
 export class RssService {
   parser: RSSParser;
-  constructor(@Inject('DbService') private readonly dbService: DbService) {
+  constructor(
+    @Inject('DbService') private readonly dbService: DbService,
+    @Inject('Logger') private readonly logger: Logger
+  ) {
     this.parser = new RSSParser({
       headers: {
         Accept: 'application/rss+xml, application/xml'
@@ -63,6 +67,7 @@ export class RssService {
     for (const entry of data.items) {
       const feed = await this.mapFeeds(meta, entry);
       if (feed) {
+        this.logger.verbose('RSS', `{{ ${feed.title} }} Done`);
         feeds.push(feed);
       }
     }

@@ -1,7 +1,7 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Inject } from '@nestjs/common';
 import { r, Connection } from 'rethinkdb-ts';
 import { APP_CONFIG } from '../config';
-import { Logger } from 'nestjs-pino';
+import { Logger } from './logger.service';
 
 const { DB_HOST, DB_PASSWORD, DB_USERNAME, DB_PORT, DB_NAME } = APP_CONFIG;
 
@@ -18,7 +18,7 @@ export class DbService {
 
   connection: Connection = null;
 
-  constructor(private readonly logger: Logger) {
+  constructor(@Inject('Logger') private readonly logger: Logger) {
     this.initDb();
   }
 
@@ -47,7 +47,7 @@ export class DbService {
         }
       }
     } catch (e) {
-      this.logger.error('[DB]', e.message);
+      this.logger.error('DB', e.message);
     }
   }
 
