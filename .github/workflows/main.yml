@@ -23,7 +23,6 @@ jobs:
     steps:
       - name: Deploy
         run: |
-          cd /github/workspace
           ls
           helm upgrade devpunk deployment/devpunk-server/.
         env:
