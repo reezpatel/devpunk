@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - continue-on-error: false
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Docker Publish
+        uses: manusa/actions-publish-docker@v1.0.1
+        with:
+          name: reezpatel/devpunk
+          tag: latest
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Deploy
+        uses: 'deliverybot/helm@v1'
+        with:
+          release: 'devpunk'
+          namespace: 'default'
+          chart: 'devpunk'
+          token: '${{ github.token }}'
+        env:
+          KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}'

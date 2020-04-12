@@ -39,5 +39,6 @@ testem.log
 Thumbs.db
 
 # Static Files
-/devpunk_static/*
+devpunk_static/*
 dist/*
+.env
