@@ -30,8 +30,12 @@ jobs:
           KUBECONFIG_FILE: "${{ secrets.KUBECONFIG }}"
       - name: Deploy
         run: |
+          echo $KUBECONFIG_FILE > kubeconfig.yml   
+          export KUBECONFIG="$KUBECONFIG_FILE/kubeconfig.yml"
           helm ls
           cd deployment/devpunk-server
           helm upgrade devpunk .
+        env:
+          KUBECONFIG_FILE: "${{ secrets.KUBECONFIG }}"
       - name: Cleaup
         run: rm "$KUBECONFIG"
