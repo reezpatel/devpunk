@@ -22,20 +22,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup
-        run: |
-          echo $KUBECONFIG_FILE > kubeconfig.yml   
-          export KUBECONFIG="$PWD/kubeconfig.yml"
-        env:
-          KUBECONFIG_FILE: "${{ secrets.KUBECONFIG }}"
       - name: Deploy
         run: |
           echo "$KUBECONFIG_FILE" > kubeconfig.yml   
           export KUBECONFIG="$PWD/kubeconfig.yml"
+          helm init --client-only
           helm ls
           cd deployment/devpunk-server
           helm upgrade devpunk .
+          rm "$KUBECONFIG"
         env:
           KUBECONFIG_FILE: "${{ secrets.KUBECONFIG }}"
-      - name: Cleaup
-        run: rm "$KUBECONFIG"
