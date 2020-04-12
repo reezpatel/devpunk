@@ -22,11 +22,8 @@ jobs:
     needs: build
     steps:
       - name: Deploy
-        uses: "deliverybot/helm@v1"
-        with:
-          release: "devpunk"
-          namespace: "default"
-          chart: "devpunk"
-          token: "${{ github.token }}"
+        run: |
+          curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+          ls
         env:
           KUBECONFIG_FILE: "${{ secrets.KUBECONFIG }}"
