@@ -22,7 +22,8 @@ jobs:
     steps:
       - name: Deploy
         run: |
-          ls
-          helm upgrade devpunk deployment/devpunk-server/.
+          pwd
+          cd helm upgrade devpunk deployment/devpunk-server
+          helm upgrade devpunk .
         env:
           KUBECONFIG_FILE: "${{ secrets.KUBECONFIG }}"
