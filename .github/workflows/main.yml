@@ -26,7 +26,7 @@ jobs:
         run: |
           echo "$KUBECONFIG_FILE" > kubeconfig.yml   
           export KUBECONFIG="$PWD/kubeconfig.yml"
-          helm init --client-only
+          helm version
           helm ls
           cd deployment/devpunk-server
           helm upgrade devpunk .
