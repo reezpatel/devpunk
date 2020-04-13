@@ -22,7 +22,7 @@ export class FeedController {
   @Get()
   async getFeeds(@Query('page', ParseIntPipe) page: number) {
     const data = await this.dbService.listEntries<FeedEntry>(FEEDS_TABLE, {
-      sort: 'order',
+      sort: 'createdAt',
       limit: RPP + 1,
       offset: (page - 1) * RPP
     });
