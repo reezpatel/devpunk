@@ -28,7 +28,9 @@ export class FeedController {
     });
     return {
       success: true,
-      data: data.slice(0, RPP),
+      data: data
+        .slice(0, RPP)
+        .map(({ createdAt, image, url, ...rest }) => rest),
       meta: {
         hasNext: data.length === RPP + 1
       }

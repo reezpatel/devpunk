@@ -8,6 +8,7 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
   annotations:
+    linkerd.io/inject: enabled
     rollme: {{ randAlphaNum 5 | quote }}
 {{ toYaml .Values.annotations | indent 4 }}
 spec:
@@ -18,6 +19,8 @@ spec:
       release: {{ .Release.Name }}
   template:
     metadata:
+      annotations:
+        linkerd.io/inject: enabled
       labels:
         app: {{ template "devpunk-server.name" . }}
         release: {{ .Release.Name }}

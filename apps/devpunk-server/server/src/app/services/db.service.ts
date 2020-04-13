@@ -1,5 +1,5 @@
 import { Injectable, Inject } from '@nestjs/common';
-import { r, Connection } from 'rethinkdb-ts';
+import { r, Connection, RTable } from 'rethinkdb-ts';
 import { APP_CONFIG } from '../config';
 import { Logger } from './logger.service';
 
@@ -59,9 +59,13 @@ export class DbService {
   }
 
   listEntries<T>(table: string, options?: ListOptions): Promise<T[]> {
-    return r
-      .table<T>(table)
-      .orderBy(r.asc(options?.sort ?? 'id'))
+    let t = r.table<T>(table);
+
+    if (options.sort) {
+      t = t.orderBy({ index: r.desc(options.sort) });
+    }
+
+    return t
       .skip(options?.offset ?? 0)
       .limit(options?.limit ?? 10)
       .run(this.connection);
