@@ -71,7 +71,18 @@ export class DbService {
       .run(this.connection);
   }
 
-  getEntryFor(table: string, row: string, value: string) {
+  getEntryFor(
+    table: string,
+    row: string,
+    value: string,
+    fromIndex: boolean = false
+  ) {
+    if (fromIndex) {
+      return r
+        .table(table)
+        .getAll(value, { index: row })
+        .run(this.connection);
+    }
     return r
       .table(table)
       .filter(r.row(row).eq(value))

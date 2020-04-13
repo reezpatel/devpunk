@@ -45,7 +45,7 @@ export class RssService {
 
   private async mapFeeds(meta: any, feed: RSSParser.Item) {
     const link = feed.link;
-    const entry = await this.dbService.getEntryFor(FEEDS_TABLE, 'url', link);
+    const entry = await this.dbService.getEntryFor(FEEDS_TABLE, 'url', link, true);
 
     if (entry.length === 0) {
       return {
