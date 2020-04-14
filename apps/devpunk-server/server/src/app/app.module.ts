@@ -13,6 +13,7 @@ import { StorageService } from './services/storage.service';
 import { StaticController } from './controllers/static.controller';
 import { CronController } from './controllers/cron.controller';
 import { Logger } from './services/logger.service';
+import { RedirectController } from './controllers/redirect.controller';
 
 @Module({
   imports: [ScheduleModule.forRoot()],
@@ -21,7 +22,8 @@ import { Logger } from './services/logger.service';
     FeedController,
     SitesController,
     StaticController,
-    CronController
+    CronController,
+    RedirectController
   ],
   providers: [Logger, DbService, RssService, FetchService, StorageService]
 })

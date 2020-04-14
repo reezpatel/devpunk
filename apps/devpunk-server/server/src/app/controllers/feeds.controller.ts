@@ -30,7 +30,10 @@ export class FeedController {
       success: true,
       data: data
         .slice(0, RPP)
-        .map(({ createdAt, image, url, ...rest }) => rest),
+        .map(({ createdAt, publishedAt, image, url, ...rest }) => ({
+          ...rest,
+          time: publishedAt || createdAt
+        })),
       meta: {
         hasNext: data.length === RPP + 1
       }

@@ -28,7 +28,7 @@ jobs:
           echo "$KUBECONFIG_FILE" > kubeconfig.yml   
           export KUBECONFIG="$PWD/kubeconfig.yml"
           cd deployment/devpunk-server
-          helm upgrade -i --wait  devpunk .
+          helm upgrade --force -i --wait devpunk .
           rm "$KUBECONFIG"
         env:
           KUBECONFIG_FILE: "${{ secrets.KUBECONFIG }}"
