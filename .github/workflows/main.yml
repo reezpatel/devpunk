@@ -28,6 +28,7 @@ jobs:
           echo "$KUBECONFIG_FILE" > kubeconfig.yml   
           export KUBECONFIG="$PWD/kubeconfig.yml"
           cd deployment/devpunk-server
+          helm delete devpunk
           helm upgrade --force -i --wait devpunk .
           rm "$KUBECONFIG"
         env:

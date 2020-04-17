@@ -1,0 +1,41 @@
+nav {
+  min-width: 240px;
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+    line-height: 65px;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin: 8px 0;
+      font-weight: 700;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.6);
+      letter-spacing: 0.6px;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        font-size: 18px;
+      }
+
+      &:nth-child(2) {
+        margin-bottom: 20px;
+      }
+
+      a {
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.2s linear;
+
+        &.active {
+          color: #00dac4;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}

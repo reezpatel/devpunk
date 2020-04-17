@@ -1,0 +1,29 @@
+header {
+  padding: 0 40px;
+  h1 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: 300;
+    color: #818181;
+  }
+  margin-bottom: 24px;
+}
+
+.feed-wrapper {
+  overflow: scroll;
+  height: calc(100vh - 120px);
+  padding: 0 40px;
+}
+
+.feeds-list-container {
+  &.col-4 {
+    .feeds-column {
+      width: 25%;
+      display: inline-block;
+      padding: 8px;
+      vertical-align: top;
+    }
+  }
+}

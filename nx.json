@@ -24,6 +24,9 @@
     },
     "models": {
       "tags": []
+    },
+    "devpunk-react": {
+      "tags": []
     }
   }
 }

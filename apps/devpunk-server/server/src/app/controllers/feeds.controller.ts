@@ -20,11 +20,20 @@ export class FeedController {
   constructor(private readonly dbService: DbService) {}
 
   @Get()
-  async getFeeds(@Query('page', ParseIntPipe) page: number) {
+  async getFeeds(
+    @Query('page', ParseIntPipe) page: number,
+    @Query('site') site: string,
+    @Query('query') query: string
+  ) {
     const data = await this.dbService.listEntries<FeedEntry>(FEEDS_TABLE, {
       sort: 'createdAt',
       limit: RPP + 1,
-      offset: (page - 1) * RPP
+      offset: (page - 1) * RPP,
+      query,
+      filter: {
+        key: 'siteId',
+        value: site
+      }
     });
     return {
       success: true,

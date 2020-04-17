@@ -1,0 +1,60 @@
+.feed-item {
+  border-radius: 12px;
+  color: white;
+  background-color: #222831;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+
+  .feed-image {
+    position: relative;
+    width: 100%;
+    min-height: 120px;
+    span {
+      position: absolute;
+      background-color: #00000085;
+      padding: 4px 8px;
+      font-size: 12px;
+      border-radius: 4px;
+      top: 16px;
+      left: 16px;
+    }
+
+    img {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      width: 100%;
+    }
+  }
+
+  .feed-content {
+    padding: 12px 16px 16px;
+  }
+
+  .feed-footer {
+    border-top: 0.2px solid rgba(255, 255, 255, 0.726);
+    padding: 16px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      font-size: 14px;
+      text-transform: capitalize;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      color: rgba(255, 255, 255, 0.609);
+    }
+
+    .feed-actions {
+      display: flex;
+      align-items: center;
+
+      svg {
+        display: inline-block;
+        margin-left: 16px;
+        width: 18px;
+      }
+    }
+  }
+}

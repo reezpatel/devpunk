@@ -1,13 +1,19 @@
 import { Injectable, Inject } from '@nestjs/common';
-import { r, Connection, RTable } from 'rethinkdb-ts';
+import { r, Connection, RTable, R, RSelection } from 'rethinkdb-ts';
 import { APP_CONFIG } from '../config';
 import { Logger } from './logger.service';
+import { FeedEntry } from '@devpunk/models';
 
 const { DB_HOST, DB_PASSWORD, DB_USERNAME, DB_PORT, DB_NAME } = APP_CONFIG;
 
 interface ListOptions {
   sort?: string;
   offset?: number;
+  filter?: {
+    key: string;
+    value: string;
+  };
+  query?: string;
   limit?: number;
 }
 
@@ -59,16 +65,29 @@ export class DbService {
   }
 
   listEntries<T>(table: string, options?: ListOptions): Promise<T[]> {
-    let t = r.table<T>(table);
+    let t: RSelection<T>;
+
+    if (options.filter) {
+      t = r
+        .table<T>(table)
+        .getAll(options.filter.key, { index: options.filter.value });
+    } else {
+      t = r.table<T>(table);
+    }
+
+    if (options.query) {
+      t.contains(options.query);
+    }
 
     if (options.sort) {
       t = t.orderBy({ index: r.desc(options.sort) });
     }
 
-    return t
-      .skip(options?.offset ?? 0)
-      .limit(options?.limit ?? 10)
-      .run(this.connection);
+    if (options.limit) {
+      t = t.limit(options.limit);
+    }
+
+    return t.skip(options?.offset ?? 0).run(this.connection);
   }
 
   getEntryFor(
