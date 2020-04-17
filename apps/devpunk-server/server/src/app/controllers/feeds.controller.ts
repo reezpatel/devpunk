@@ -26,14 +26,21 @@ export class FeedController {
     @Query('query') query: string
   ) {
     const data = await this.dbService.listEntries<FeedEntry>(FEEDS_TABLE, {
-      sort: 'createdAt',
+      sort: site ? 'site_createdAt' : 'createdAt_site',
       limit: RPP + 1,
       offset: (page - 1) * RPP,
       query,
-      filter: {
-        key: 'siteId',
-        value: site
-      }
+      range: site
+        ? {
+            key: 'site_createdAt',
+            max: [site, 'MAX'],
+            min: [site, 'MIN']
+          }
+        : {
+            key: 'createdAt_site',
+            max: ['MAX', 'MAX'],
+            min: ['MIN', 'MIN']
+          }
     });
     return {
       success: true,

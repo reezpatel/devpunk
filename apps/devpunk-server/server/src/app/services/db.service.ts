@@ -9,9 +9,10 @@ const { DB_HOST, DB_PASSWORD, DB_USERNAME, DB_PORT, DB_NAME } = APP_CONFIG;
 interface ListOptions {
   sort?: string;
   offset?: number;
-  filter?: {
+  range?: {
+    max: string[];
+    min: string[];
     key: string;
-    value: string;
   };
   query?: string;
   limit?: number;
@@ -65,22 +66,30 @@ export class DbService {
   }
 
   listEntries<T>(table: string, options?: ListOptions): Promise<T[]> {
-    let t: RSelection<T>;
+    let t: any = r.table<T>(table);
 
-    if (options.filter) {
-      t = r
-        .table<T>(table)
-        .getAll(options.filter.key, { index: options.filter.value });
-    } else {
-      t = r.table<T>(table);
-    }
-
-    if (options.query) {
-      t.contains(options.query);
+    if (options.range) {
+      t = t.between(
+        options.range.min.map(e => (e === 'MIN' ? r.minval : e)),
+        options.range.max.map(e => (e === 'MAX' ? r.maxval : e)),
+        {
+          index: options.range.key,
+          rightBound: 'closed'
+        }
+      );
     }
 
     if (options.sort) {
       t = t.orderBy({ index: r.desc(options.sort) });
+    }
+
+    if (options.query) {
+      t = t.filter(
+        r
+          .row('title')
+          .downcase()
+          .match(options.query.toLowerCase())
+      );
     }
 
     if (options.limit) {
