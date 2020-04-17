@@ -1,14 +1,60 @@
 header {
-  padding: 0 40px;
-  h1 {
-    font-size: 32px;
+  padding: 0 34px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.256);
+  display: flex;
+  justify-content: space-between;
+
+  .header-title {
+    h1 {
+      font-size: 32px;
+      display: flex;
+      align-items: center;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 300;
+      color: #818181;
+    }
+    padding: 30px 0 30px;
   }
-  h3 {
-    font-size: 16px;
-    font-weight: 300;
-    color: #818181;
+
+  .header-options {
+    display: flex;
+
+    .header-search {
+      border-left: 1px solid rgba(0, 0, 0, 0.256);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+
+      input {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.256);
+        font-size: 24px;
+        padding: 2px 16px;
+        margin-right: 24px;
+        line-height: 36px;
+      }
+
+      svg {
+        margin: 0 4px;
+        width: 36px;
+        height: auto;
+      }
+    }
+    .header-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 10px 0 50px;
+      border-left: 1px solid rgba(0, 0, 0, 0.256);
+      img {
+        height: 55px;
+      }
+    }
   }
-  margin-bottom: 24px;
 }
 
 .feed-wrapper {

@@ -92,11 +92,15 @@ export class DbService {
       );
     }
 
+    if (options.offset) {
+      t = t.skip(options.offset);
+    }
+
     if (options.limit) {
       t = t.limit(options.limit);
     }
 
-    return t.skip(options?.offset ?? 0).run(this.connection);
+    return t.run(this.connection);
   }
 
   getEntryFor(

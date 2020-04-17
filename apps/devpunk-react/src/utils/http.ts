@@ -23,7 +23,7 @@ const http = {
   ): Promise<{ data: FeedResponse[]; meta: { hasNext: boolean } }> => {
     switch (site) {
       case 'ALL': {
-        return fetch(PAGES_URL(page)).then(r => r.json());
+        return fetch(PAGES_URL(page, query)).then(r => r.json());
       }
       case 'PINNED': {
         return { data: storage.listLikedFeed(), meta: { hasNext: false } };
@@ -36,6 +36,7 @@ const http = {
     }
   },
   getFeedBanner: id => `${DOMAIN}/static/feeds/${id}`,
+  getSiteIcon: id => `${DOMAIN}/static/sites/${id}`,
   getFeedUrl: id => `${DOMAIN}/r/${id}`
 };
 

@@ -4,6 +4,8 @@ import FeedsItem from '../FeedsItem';
 import { http } from '../../utils/http';
 
 import './FeedsContainer.scss';
+import { SearchIcon } from '../Icons/SearchIcon';
+import { CloseIcon } from '../Icons/CloseIcon';
 
 const LOAD_FEED_OFFSET = 520;
 
@@ -24,9 +26,11 @@ const FeedsContainer: (props: FeedsContainerProps) => JSX.Element = ({
   const loading = useRef(false);
   const page = useRef(0);
   const hasNext = useRef(true);
+  const timeout = useRef<number>();
   const container = useRef<HTMLDivElement>();
   const [pendingFeeds, setPendingFeeds] = useState<FeedResponse[]>([]);
   const [query, setQuery] = useState<string>('');
+  const [isSearchEnabled, setSearchEnabled] = useState(false);
 
   const addToContainer = () => {
     if (pendingFeeds.length === 0) {
@@ -53,6 +57,7 @@ const FeedsContainer: (props: FeedsContainerProps) => JSX.Element = ({
   };
 
   const addFeeds = async () => {
+    console.log(loading.current, hasNext.current, pendingFeeds.length);
     if (loading.current || !hasNext.current || pendingFeeds.length !== 0) {
       return;
     }
@@ -78,24 +83,62 @@ const FeedsContainer: (props: FeedsContainerProps) => JSX.Element = ({
     }
   };
 
+  const handleActionButtonClicked = () => {
+    if (isSearchEnabled) {
+      setQuery('');
+    }
+    setSearchEnabled(!isSearchEnabled);
+  };
+
+  const handleInputChange = e => {
+    if (timeout.current) {
+      clearTimeout(timeout.current);
+      timeout.current = null;
+    }
+
+    const { value } = e.target;
+    timeout.current = setTimeout(() => {
+      setQuery(value);
+      timeout.current = null;
+    }, 600);
+  };
+
   useEffect(() => {
     addToContainer();
   }, [pendingFeeds.length]);
 
   useEffect(() => {
+    console.log('here');
     feeds.current = Array(columns)
       .fill(1)
       .map(() => []);
     page.current = 0;
     hasNext.current = true;
     addFeeds();
-  }, [activeSite]);
+  }, [activeSite, query]);
 
   return (
     <div className="feeds-container">
       <header>
-        <h1>DevPunk</h1>
-        <h3>Latest news at you fingertips</h3>
+        <div className="header-title">
+          <h1>DevPunk</h1>
+          <h3>Latest news at you fingertips</h3>
+        </div>
+        <div className="header-options">
+          <div className="header-search">
+            {isSearchEnabled && (
+              <input onChange={handleInputChange} type="text"></input>
+            )}
+            {isSearchEnabled ? (
+              <CloseIcon onClick={handleActionButtonClicked} />
+            ) : (
+              <SearchIcon onClick={handleActionButtonClicked} />
+            )}
+          </div>
+          <div className="header-logo">
+            <img src={http.getSiteIcon(activeSite)}></img>
+          </div>
+        </div>
       </header>
       <div className="feed-wrapper" onScroll={handleWrapperScroll}>
         <div

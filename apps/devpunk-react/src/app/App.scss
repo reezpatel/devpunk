@@ -19,13 +19,13 @@ a {
 
   .header {
     color: white;
-    padding: 30px 40px 40px;
+    padding: 30px 0 40px;
     flex-shrink: 1;
     background-color: #191919;
   }
 
   .content {
-    padding: 30px 0 40px;
+    padding-bottom: 40px;
     flex-grow: 1;
   }
 }

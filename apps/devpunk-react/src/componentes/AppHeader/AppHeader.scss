@@ -1,14 +1,18 @@
 nav {
-  min-width: 240px;
+  min-width: 280px;
 
   h1 {
+    padding: 0 40px;
     font-size: 32px;
     margin-bottom: 24px;
     line-height: 65px;
   }
 
   ul {
+    padding: 0 40px 20px;
     list-style: none;
+    overflow: scroll;
+    height: calc(100vh - 120px);
 
     li {
       margin: 8px 0;
