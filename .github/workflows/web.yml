@@ -17,9 +17,8 @@ jobs:
       - name: Build
         run: |
           npm install
-          npm run build
+          yarn exec nx build devpunk-react
       - name: Deploy
         run: |
-          ls && pwd
           npm i -g firebase-tools
           firebase deploy --token "${{ secrets.FIREBASE_TOKEN }}"
