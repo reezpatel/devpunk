@@ -1,10 +1,25 @@
+@import '../../scss/mixins.scss';
+
 header {
-  padding: 0 34px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.256);
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+
+  @include desktop {
+    padding: 0 34px;
+    flex-direction: row;
+  }
 
   .header-title {
+    display: none;
+
+    @include desktop {
+      display: inline-block;
+      padding: 30px 0 30px;
+      border-bottom: none;
+    }
+
     h1 {
       font-size: 32px;
       display: flex;
@@ -15,43 +30,71 @@ header {
       font-weight: 300;
       color: #818181;
     }
-    padding: 30px 0 30px;
+    padding: 16px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.256);
   }
 
   .header-options {
     display: flex;
+    justify-content: flex-end;
 
     .header-search {
       border-left: 1px solid rgba(0, 0, 0, 0.256);
       display: flex;
-      justify-content: center;
       align-items: center;
-      padding: 0 40px;
+      padding: 0 16px;
+      flex-grow: 1;
+      justify-content: flex-end;
+
+      @include desktop {
+        justify-content: center;
+        padding: 0 40px;
+      }
 
       input {
         border: none;
         outline: none;
         border-bottom: 1px solid rgba(0, 0, 0, 0.256);
-        font-size: 24px;
-        padding: 2px 16px;
-        margin-right: 24px;
+        font-size: 18px;
+        padding: 2px 8px;
+        margin-right: 12px;
         line-height: 36px;
+        width: 100%;
+
+        @include desktop {
+          font-size: 24px;
+          padding: 2px 16px;
+          width: 480px;
+          margin-right: 24px;
+        }
       }
 
       svg {
         margin: 0 4px;
-        width: 36px;
+        width: 24px;
         height: auto;
+
+        @include desktop {
+          width: 36px;
+        }
       }
     }
     .header-logo {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0 10px 0 50px;
+      padding: 16px;
       border-left: 1px solid rgba(0, 0, 0, 0.256);
       img {
-        height: 55px;
+        height: 35px;
+
+        @include desktop {
+          height: 55px;
+        }
+      }
+
+      @include desktop {
+        padding: 0 10px 0 50px;
       }
     }
   }
@@ -59,14 +102,35 @@ header {
 
 .feed-wrapper {
   overflow: scroll;
-  height: calc(100vh - 120px);
-  padding: 0 40px;
+  height: calc(100vh - 67px);
+  padding: 10px;
+
+  overflow: scroll;
+  @include desktop {
+    padding: 0 40px;
+  }
 }
 
 .feeds-list-container {
   &.col-4 {
     .feeds-column {
       width: 25%;
+      display: inline-block;
+      padding: 8px;
+      vertical-align: top;
+    }
+  }
+  &.col-3 {
+    .feeds-column {
+      width: 33%;
+      display: inline-block;
+      padding: 8px;
+      vertical-align: top;
+    }
+  }
+  &.col-2 {
+    .feeds-column {
+      width: 50%;
       display: inline-block;
       padding: 8px;
       vertical-align: top;

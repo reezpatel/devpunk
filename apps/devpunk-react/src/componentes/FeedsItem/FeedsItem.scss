@@ -1,3 +1,5 @@
+@import '../../scss/mixins.scss';
+
 .feed-item {
   border-radius: 12px;
   color: white;
@@ -9,15 +11,24 @@
   .feed-image {
     position: relative;
     width: 100%;
-    min-height: 120px;
+    min-height: 30px;
+
+    @include desktop {
+      min-height: 120px;
+    }
+
     span {
       position: absolute;
       background-color: #00000085;
       padding: 4px 8px;
-      font-size: 12px;
+      font-size: 8px;
       border-radius: 4px;
       top: 16px;
       left: 16px;
+
+      @include desktop {
+        font-size: 12px;
+      }
     }
 
     img {
@@ -28,22 +39,37 @@
   }
 
   .feed-content {
-    padding: 12px 16px 16px;
+    padding: 0px 14px 4px;
+    font-size: 14px;
+    word-break: break-word;
+
+    @include desktop {
+      padding: 12px 16px 16px;
+      font-size: 16px;
+    }
   }
 
   .feed-footer {
     border-top: 0.2px solid rgba(255, 255, 255, 0.726);
-    padding: 16px;
+    padding: 8px 16px;
     align-items: center;
     display: flex;
     justify-content: space-between;
 
+    @include desktop {
+      padding: 16px;
+    }
+
     span {
-      font-size: 14px;
+      font-size: 10px;
       text-transform: capitalize;
       font-weight: 600;
       letter-spacing: 0.2px;
       color: rgba(255, 255, 255, 0.609);
+
+      @include desktop {
+        font-size: 14px;
+      }
     }
 
     .feed-actions {

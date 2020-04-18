@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "site": "devpunk-feed",
+    "public": "dist/apps/devpunk-react",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

@@ -9,14 +9,28 @@ import { CloseIcon } from '../Icons/CloseIcon';
 
 const LOAD_FEED_OFFSET = 520;
 
-const columns = 4;
+const getColumns = (): number => {
+  if (window.matchMedia('(max-width: 700px)').matches) {
+    return 2;
+  }
+
+  if (window.matchMedia('(max-width: 1200px)').matches) {
+    return 3;
+  }
+
+  return 4;
+};
+
+const columns = getColumns();
 
 interface FeedsContainerProps {
   activeSite: string;
+  toggleMenu: () => void;
 }
 
 const FeedsContainer: (props: FeedsContainerProps) => JSX.Element = ({
-  activeSite
+  activeSite,
+  toggleMenu
 }) => {
   const feeds = useRef<FeedResponse[][]>(
     Array(columns)
@@ -26,7 +40,7 @@ const FeedsContainer: (props: FeedsContainerProps) => JSX.Element = ({
   const loading = useRef(false);
   const page = useRef(0);
   const hasNext = useRef(true);
-  const timeout = useRef<number>();
+  const timeout = useRef<any>();
   const container = useRef<HTMLDivElement>();
   const [pendingFeeds, setPendingFeeds] = useState<FeedResponse[]>([]);
   const [query, setQuery] = useState<string>('');
@@ -57,7 +71,6 @@ const FeedsContainer: (props: FeedsContainerProps) => JSX.Element = ({
   };
 
   const addFeeds = async () => {
-    console.log(loading.current, hasNext.current, pendingFeeds.length);
     if (loading.current || !hasNext.current || pendingFeeds.length !== 0) {
       return;
     }
@@ -69,6 +82,10 @@ const FeedsContainer: (props: FeedsContainerProps) => JSX.Element = ({
     loading.current = false;
 
     setPendingFeeds(newFeeds.data);
+  };
+
+  const handleIconClick = () => {
+    toggleMenu();
   };
 
   const handleWrapperScroll = (e: React.UIEvent<HTMLDivElement>) => {
@@ -108,7 +125,6 @@ const FeedsContainer: (props: FeedsContainerProps) => JSX.Element = ({
   }, [pendingFeeds.length]);
 
   useEffect(() => {
-    console.log('here');
     feeds.current = Array(columns)
       .fill(1)
       .map(() => []);
@@ -136,7 +152,10 @@ const FeedsContainer: (props: FeedsContainerProps) => JSX.Element = ({
             )}
           </div>
           <div className="header-logo">
-            <img src={http.getSiteIcon(activeSite)}></img>
+            <img
+              onClick={handleIconClick}
+              src={http.getSiteIcon(activeSite)}
+            ></img>
           </div>
         </div>
       </header>

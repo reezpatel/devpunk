@@ -42,3 +42,4 @@ Thumbs.db
 devpunk_static/*
 dist/*
 .env
+.firebase/*

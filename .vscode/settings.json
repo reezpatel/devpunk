@@ -4,6 +4,7 @@
         "devpunk",
         "maxval",
         "minval",
+        "mixins",
         "pino"
     ]
 }

@@ -8,6 +8,7 @@ import FeedsContainer from '../componentes/FeedsContainer';
 export const App = () => {
   const [sites, setSites] = useState<SitesResponse[]>([]);
   const [activeSite, setActiveSite] = useState<string>('ALL');
+  const [isMenuActive, setMenuActive] = useState<boolean>(false);
 
   const init = async () => {
     setSites((await http.getSites()).data);
@@ -17,9 +18,17 @@ export const App = () => {
     init();
   }, []);
 
+  useEffect(() => {
+    setMenuActive(false);
+  }, [activeSite]);
+
+  const handleToggleMenu = () => {
+    setMenuActive(!isMenuActive);
+  };
+
   return (
     <div className="app">
-      <div className="header">
+      <div className={`header ${isMenuActive ? 'active' : ''}`}>
         <AppHeader
           setActiveSite={setActiveSite}
           activeSite={activeSite}
@@ -27,7 +36,7 @@ export const App = () => {
         />
       </div>
       <div className="content">
-        <FeedsContainer activeSite={activeSite} />
+        <FeedsContainer toggleMenu={handleToggleMenu} activeSite={activeSite} />
       </div>
     </div>
   );

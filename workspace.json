@@ -100,7 +100,10 @@
             "tsConfig": "apps/devpunk-react/tsconfig.app.json",
             "assets": [
               "apps/devpunk-react/src/favicon.ico",
-              "apps/devpunk-react/src/assets"
+              "apps/devpunk-react/src/assets",
+              "apps/devpunk-react/src/images",
+              "apps/devpunk-react/src/service-worker.js",
+              "apps/devpunk-react/src/manifest.json"
             ],
             "styles": ["apps/devpunk-react/src/styles.scss"],
             "scripts": [],
