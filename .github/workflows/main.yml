@@ -10,16 +10,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Declare variables
-        id: vars
-        shell: bash
-        run: |
-          echo "::set-output name=hash::$(git rev-parse --short HEAD)"
       - name: Docker Publish
         uses: manusa/actions-publish-docker@v1.0.1
         with:
           name: reezpatel/devpunk
-          tag: ${{ steps.vars.outputs.sha_short }}
+          tag: latest
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
   deploy:
@@ -33,7 +28,7 @@ jobs:
           echo "$KUBECONFIG_FILE" > kubeconfig.yml   
           export KUBECONFIG="$PWD/kubeconfig.yml"
           cd deployment/devpunk-server
-          helm upgrade --wait --install --set-string image.tag="${{ steps.vars.outputs.sha_short }}" devpunk . -n feeds
+          helm upgrade --wait --install devpunk . -n feeds
           rm "$KUBECONFIG"
         env:
           KUBECONFIG_FILE: "${{ secrets.KUBECONFIG }}"
