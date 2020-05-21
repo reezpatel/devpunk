@@ -33,7 +33,7 @@ jobs:
           echo "$KUBECONFIG_FILE" > kubeconfig.yml   
           export KUBECONFIG="$PWD/kubeconfig.yml"
           cd deployment/devpunk-server
-          helm upgrade --wait --set-string image.tag="${{ steps.vars.outputs.sha_short }}" devpunk . -n feeds
+          helm upgrade --wait --install --set-string image.tag="${{ steps.vars.outputs.sha_short }}" devpunk . -n feeds
           rm "$KUBECONFIG"
         env:
           KUBECONFIG_FILE: "${{ secrets.KUBECONFIG }}"
