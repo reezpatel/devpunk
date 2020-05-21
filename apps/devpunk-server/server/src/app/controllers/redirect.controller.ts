@@ -15,7 +15,7 @@ export class RedirectController {
 
     if (feed) {
       return {
-        url: feed.url
+        url: feed.url.startsWith('/') ? `${feed.source}${feed.url}` : feed.url
       };
     }
   }
