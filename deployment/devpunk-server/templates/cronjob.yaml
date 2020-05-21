@@ -1,0 +1,16 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: devpunk-cron
+spec:
+  schedule: "0 */6 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: devpunk-feeds-update
+              image: curlimages/curl:7.69.1
+              args:
+                - http://devpunk-devpunk-server.feeds.svc.cluster.local:3333/v1/cron
+          restartPolicy: OnFailure

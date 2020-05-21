@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "devpunk-server.name" . }}-config
+data:
+  DB_HOST: {{ .Values.rethinkdb.host | quote}}
+  DB_PORT: {{ .Values.rethinkdb.port | quote}}
+  DB_USERNAME: {{ .Values.rethinkdb.username | quote}}
+  DB_PASSWORD: {{ .Values.rethinkdb.password | quote}}
+  DB_NAME:  {{ .Values.rethinkdb.db }}
+  RPP: "30"
+  DATA_PATH: /usr/share/devpunk
+  DATA_FOLDER: devpunk_static

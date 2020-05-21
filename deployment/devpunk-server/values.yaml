@@ -16,8 +16,6 @@ service:
 annotations: 
   linkerd.io/inject: enabled
 
-configMap: devpunk-config
-
 ingress:
   enabled: true
   annotations:
@@ -31,25 +29,23 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
-resources: 
-  limits:
-   cpu: 700m
-   memory: 512Mi
-  requests:
-   cpu: 300m
-   memory: 256Mi
-
-volumeMounts:
-  - mountPath: "/usr/share/devpunk"
-    name: devpunk-volume
+resources: {}
   
-pvc:
-  - name: devpunk-volume
-    persistentVolumeClaim:
-      claimName: volt-1
+persistence:
+  enabled: trues
+  storageClass: local-path
+  accessMode: ReadWriteOnce
+  size: 30Gi
 
 nodeSelector: {}
 
 tolerations: []
 
 affinity: {}
+
+rethinkdb:
+  host: metapod-rethinkdb-proxy.rethinkdb.svc.cluster.local
+  port: 28015
+  username: devpunk_user
+  password: ypaNwzQV8NvQuuUt
+  db: devpunk_db

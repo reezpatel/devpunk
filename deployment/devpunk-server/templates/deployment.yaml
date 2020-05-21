@@ -30,10 +30,11 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           volumeMounts:
-{{ toYaml .Values.volumeMounts | indent 10 }}
+            - mountPath: "/usr/share/devpunk"
+              name: devpunk-volume
           envFrom:
             - configMapRef:
-                name: {{ .Values.configMap }}
+                name: {{ template "devpunk-server.name" . }}-config
           ports:
             - name: http
               containerPort: 3333
@@ -49,7 +50,13 @@ spec:
           resources:
 {{ toYaml .Values.resources | indent 12 }}
       volumes:
-{{ toYaml .Values.pvc | indent 8 }}
+        - name: devpunk-volume
+        {{- if .Values.persistence.enabled }}
+          persistentVolumeClaim:
+            claimName: {{ default (include "devpunk-server.fullname" .) .Values.persistence.existingClaim }}
+        {{- else }}
+          emptyDir: {}
+        {{- end }}
     {{- with .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml . | indent 8 }}
