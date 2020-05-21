@@ -3,6 +3,8 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: {{ include "devpunk-server.fullname" . }}
+  annotations:
+    "helm.sh/resource-policy": keep
 spec:
   storageClassName: {{ .Values.persistence.storageClass | quote }}
   accessModes:
