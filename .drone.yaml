@@ -20,11 +20,11 @@ steps:
       KUBECONFIG_FILE:
         from_secret: KUBECONFIG_FILE
     commands:
-      - echo $KUBECONFIG_FILE | base64 -d > kubeconfig.yml
+      - echo "$KUBECONFIG_FILE" > kubeconfig.b64
+      - base64 -d kubeconfig.b64 > kubeconfig.yml
       - export KUBECONFIG="$PWD/kubeconfig.yml"
       - cd deployment/devpunk-server
       - helm upgrade --wait --set-string image.tag="${DRONE_COMMIT_SHA:0:6}" devpunk . -n feeds
-      - rm "$KUBECONFIG"
   - name: ui
     image: andreysenov/firebase-tools
     environment:
