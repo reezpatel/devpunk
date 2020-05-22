@@ -21,6 +21,7 @@ steps:
         from_secret: KUBECONFIG_FILE
     commands:
       - echo "$KUBECONFIG_FILE" > kubeconfig.b64
+      - echo "$KUBECONFIG_FILE"
       - base64 -d kubeconfig.b64 > kubeconfig.yml
       - export KUBECONFIG="$PWD/kubeconfig.yml"
       - cd deployment/devpunk-server
