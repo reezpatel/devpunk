@@ -22,3 +22,9 @@ steps:
       - cd deployment/devpunk-server
       - helm upgrade --wait --set-string image.tag="${DRONE_COMMIT_SHA:0:6}" devpunk . -n feeds
       - rm "$KUBECONFIG"
+  - name: ui
+    image: andreysenov/firebase-tools
+    commands:
+      - npm install
+      - yarn exec nx build devpunk-react
+      - firebase deploy --token "${FIREBASE_TOKEN}"
