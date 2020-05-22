@@ -7,7 +7,5 @@ steps:
     image: plugins/docker
     repo: reezpatel/devpunk
     tags: ["${DRONE_COMMIT_SHA:0:7}", "latest"]
-    username:
-      from_secret: DOCKER_USERNAME
-    password:
-      from_secret: DOCKER_PASSWORD
+    username: ${DOCKER_USERNAME}
+    password: ${DOCKER_PASSWORD}
