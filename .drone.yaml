@@ -6,6 +6,13 @@ steps:
   - name: build
     image: plugins/docker
     repo: reezpatel/devpunk
-    tags: ["${DRONE_COMMIT_SHA:0:7}", "latest"]
+    tags:
+      - latest
+      - ${DRONE_COMMIT_SHA:0:6}
     username: ${DOCKER_USERNAME}
     password: ${DOCKER_PASSWORD}
+  - name: install
+    image: alpine/helm:3.2.1
+    commands:
+      - ls
+      - pwd
