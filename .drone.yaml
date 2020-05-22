@@ -10,8 +10,10 @@ steps:
       tags:
         - latest
         - ${DRONE_COMMIT_SHA:0:6}
-      username: ${DOCKER_USERNAME}
-      password: ${DOCKER_PASSWORD}
+      username:
+        from_secret: DOCKER_USERNAME
+      password:
+        from_secret: DOCKER_PASSWORD
   - name: install
     image: alpine/helm:3.2.1
     commands:
