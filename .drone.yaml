@@ -20,8 +20,7 @@ steps:
       KUBECONFIG_FILE:
         from_secret: KUBECONFIG_FILE
     commands:
-      - echo $KUBECONFIG_FILE | base64 --decode > kubeconfig.yml
-      - echo $KUBECONFIG_FILE
+      - echo $KUBECONFIG_FILE | base64 -d > kubeconfig.yml
       - export KUBECONFIG="$PWD/kubeconfig.yml"
       - cd deployment/devpunk-server
       - helm upgrade --wait --set-string image.tag="${DRONE_COMMIT_SHA:0:6}" devpunk . -n feeds
