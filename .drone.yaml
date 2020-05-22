@@ -4,8 +4,11 @@ name: default
 
 steps:
   - name: build
-    image: docker
-    commands:
-      - docker build -t reezpatel/devpunk:latest -t "reezpatel/devpunk${DRONE_COMMIT_SHA:0:8}" .
-      - docker login --username reezpatel --password a2d8cd84-74ed-4188-bdbc-e6bab999acfd
-      - docker push reezpatel/devpunk:latest
+    image: plugins/docker
+    repo: reezpatel/devpunk
+    tags: ["${DRONE_COMMIT_SHA:0:7}", "latest"]
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+      
