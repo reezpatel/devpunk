@@ -17,5 +17,8 @@ steps:
   - name: install
     image: alpine/helm:3.2.1
     commands:
-      - ls
-      - pwd
+      - echo "${KUBECONFIG_FILE}" > kubeconfig.yml
+      - export KUBECONFIG="$PWD/kubeconfig.yml"
+      - cd deployment/devpunk-server
+      - helm upgrade --wait --set-string image.tag="${DRONE_COMMIT_SHA:0:6}" devpunk . -n feeds
+      - rm "$KUBECONFIG"
